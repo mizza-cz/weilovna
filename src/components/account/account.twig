@@ -1,0 +1,21 @@
+<div class="account">
+  <div class="account__avatar">
+    <img src="images/ico/ava.svg" alt="ava" />
+  </div>
+  <div class="dropdown account__dropdown">
+    <button
+      class="account__btn"
+      type="button"
+      id="accountReg"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Můj účet {% include "@images/dropdown.svg" %}
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="accountReg">
+      <li><a class="dropdown-item" href="#">Přihlásit se</a></li>
+      <li><a class="dropdown-item" href="#">Registrace </a></li>
+    </ul>
+  </div>
+  <a href="#" class="account__btn">Nová registrace</a>
+</div>

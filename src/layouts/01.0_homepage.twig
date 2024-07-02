@@ -1,0 +1,17 @@
+{% extends "@components/base/base.twig" %} {% set title = "01.0_homepage" %} {%
+block main %}
+<div class="main__wrapper">
+  {% include "@components/navigation/navigation.twig" %}
+  <div class="container">
+    <div class="main__row">
+      {% include "@components/aside/asideHome.twig" %}
+      <div class="main__content">
+        {% include "@components/about-section/about-section.twig" %} {% include
+        "@components/productsSlider/productsSlider.twig" %} {% include
+        "@components/productsSlider/productsSlider-2.twig" %} {% include
+        "@components/partners-section/partners-section.twig" %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

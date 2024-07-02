@@ -1,0 +1,30 @@
+<section class="about-section">
+  <div class="about-section__title">Veterinární klinika Na Weilovně</div>
+  <p class="about-section__text">
+    Nakupujte krmiva u odborníků a dopřejte Vašim psům a kočkám to nejlepší pro
+    jejich zdravý a šťastný život. Objednávejte online a nechte si vše doručit
+    přímo domů - bez starostí a tahání těžkých balíků z obchodu.
+  </p>
+  <p class="hidden about-section__text">
+    Nakupujte krmiva u odborníků a dopřejte Vašim psům a kočkám to nejlepší pro
+    jejich zdravý a šťastný život. Objednávejte online a nechte si vše doručit
+    přímo domů - bez starostí a tahání těžkých balíků z obchodu.
+  </p>
+  <div class="buttonMore" onclick="toggleParagraph()">
+    {% include "@images/dropdown.svg" %}
+  </div>
+</section>
+<script>
+  function toggleParagraph() {
+    var paragraphs = document.querySelectorAll(".about-section__text");
+    var button = document.querySelector(".buttonMore"); // Замените на ваш селектор
+
+    if (paragraphs.length > 1) {
+      paragraphs[1].classList.toggle("hidden");
+    }
+
+    if (button) {
+      button.classList.toggle("open");
+    }
+  }
+</script>

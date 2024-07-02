@@ -1,0 +1,70 @@
+.icon {
+  position: relative;
+  padding-left: 32px !important;
+  display: flex;
+  align-items: center;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.icon--poultry::before {
+  height: 23px;
+  background-image: url("../images/content/nav/poultry.png");
+}
+
+.icon--ferret::before {
+  height: 20px;
+  background-image: url("../images/content/nav/ferret.png");
+}
+
+.icon--rodent::before {
+  height: 20px;
+  background-image: url("../images/content/nav/rodent.png");
+}
+
+.icon--goat::before {
+  height: 21px;
+  background-image: url("../images/content/nav/goat.png");
+}
+
+.icon--rabbit::before {
+  height: 19px;
+  background-image: url("../images/content/nav/rabbit.png");
+}
+.icon--sheep::before {
+  height: 16px;
+  background-image: url("../images/content/nav/sheep.png");
+}
+.icon--reptile::before {
+  height: 21px;
+  background-image: url("../images/content/nav/reptile.png");
+}
+.icon--pig::before {
+  height: 24px;
+  background-image: url("../images/content/nav/pig.png");
+}
+
+.icon--bird::before {
+  height: 19px;
+  background-image: url("../images/content/nav/bird.png");
+}
+
+.icon--cattle::before {
+  height: 18px;
+  background-image: url("../images/content/nav/cattle.png");
+}
+
+.icon--animals::before {
+  height: 20px;
+  top: 8px;
+  left: 3px;
+  background-image: url("../images/content/nav/animals.png");
+}

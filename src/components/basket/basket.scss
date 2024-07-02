@@ -1,0 +1,45 @@
+.basket {
+  background-color: var(--blue);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 3.2rem;
+  justify-content: center;
+  transition: all 0.3s;
+  text-decoration: none;
+  &:hover {
+    background-color: var(--dark-pink);
+    .basket__item-count {
+      color: var(--dark-pink);
+    }
+  }
+  &__item {
+    width: 36px;
+    height: 32px;
+    position: relative;
+    svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+  &__item-count {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 21.4px;
+    text-align: center;
+    color: var(--blue);
+    position: absolute;
+    transition: all 0.3s;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  span {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25.9px;
+    color: var(--color-light);
+  }
+}

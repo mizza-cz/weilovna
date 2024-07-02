@@ -1,0 +1,31 @@
+/*! purgecss start ignore */
+.container {
+  max-width: 1222px !important;
+  padding: 0 16px !important;
+}
+
+.btn {
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  height: 45px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.31px;
+  text-align: center;
+  background-color: var(--blue);
+  color: var(--color-light);
+  transition: all 0.3s;
+  &:focus,
+  &:active,
+  &:target,
+  &:hover {
+    color: var(--color-light) !important;
+    background-color: var(--dark-pink) !important;
+  }
+}
+/*! purgecss end ignore */

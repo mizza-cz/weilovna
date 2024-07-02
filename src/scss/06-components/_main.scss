@@ -1,0 +1,12 @@
+.main {
+  &__row {
+    display: flex;
+  }
+  &__content {
+    width: 100%;
+  }
+  &__wrapper .navbar__menu {
+    justify-content: flex-end;
+    padding-right: 3.7rem;
+  }
+}

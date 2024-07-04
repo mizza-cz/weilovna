@@ -1,0 +1,25 @@
+input:not([type="checkbox"]) {
+  display: block;
+  border: 1px solid var(--light-gray);
+  height: 52px;
+  border-radius: 8px;
+  padding: 0 16px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.31px;
+  color: var(--color-text);
+  transition: all 0.3s;
+  outline: none;
+  width: 100%;
+  &::placeholder {
+    color: var(--medium-gray);
+  }
+  &:hover {
+    box-shadow: 0px 4px 8px 0px #24242426;
+  }
+  &:focus,
+  &:target {
+    box-shadow: 0px 4px 8px 0px #24242426;
+    border: 1px solid var(--medium-gray);
+  }
+}

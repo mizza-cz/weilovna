@@ -7,9 +7,9 @@ $(document).ready(function () {
       slidesToShow: 4,
       slidesToScroll: 1,
       prevArrow:
-        '<button class="productsSlider__btn productsSlider__btnprev"><img src="/images/ico/left.svg" loading="lazy" alt="" /></button>',
+        '<button class="productsSlider__btn productsSlider__btnprev"><img src="images/ico/left.svg" loading="lazy" alt="" /></button>',
       nextArrow:
-        '<button class="productsSlider__btn productsSlider__btnnext"><img src="/images/ico/right.svg" loading="lazy" alt="" /></button>',
+        '<button class="productsSlider__btn productsSlider__btnnext"><img src="images/ico/right.svg" loading="lazy" alt="" /></button>',
       responsive: [
         {
           breakpoint: 920,
@@ -17,7 +17,7 @@ $(document).ready(function () {
             slidesToShow: 4,
             dots: true,
             arrows: false,
-          },
+          },  
         },
         {
           breakpoint: 640,

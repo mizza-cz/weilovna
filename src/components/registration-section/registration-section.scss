@@ -78,6 +78,9 @@
   button.btn {
     max-width: 360px;
     margin: 40px auto 0;
+    @include media-breakpoint-down(lg) {
+      max-width: 100%;
+    }
   }
 }
 

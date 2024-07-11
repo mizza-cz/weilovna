@@ -1,0 +1,43 @@
+.pagination {
+  display: flex;
+  margin-top: 80px;
+  margin-left: auto;
+  align-items: center;
+  gap: 40px;
+  justify-content: flex-end;
+  @include media-breakpoint-down(lg) {
+    justify-content: center;
+    margin-top: 40px;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .page-item.active .page-link {
+    background-color: transparent;
+    color: var(--blue);
+  }
+
+  .page-link {
+    color: var(--blue);
+    text-decoration-color: transparent;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    svg {
+      width: 26px;
+      height: 26px;
+      transition: all 0.3s;
+    }
+    &:hover {
+      svg {
+        transform: scale(1.2);
+        path {
+          fill: var(--dark-pink);
+        }
+      }
+    }
+  }
+}

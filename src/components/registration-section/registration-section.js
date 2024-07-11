@@ -158,13 +158,13 @@ $(document).ready(function () {
     }
   });
 
-  // Показ/скрытие полей для компании
-  document
-    .getElementById("companyCheckbox")
-    .addEventListener("change", function () {
+  var companyCheckbox = document.getElementById("companyCheckbox");
+  if (companyCheckbox) {
+    companyCheckbox.addEventListener("change", function () {
       var companyFields = document.querySelectorAll(".company-fields");
       companyFields.forEach(function (field) {
         field.style.display = this.checked ? "block" : "none";
       }, this);
     });
+  }
 });

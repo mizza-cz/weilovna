@@ -1,0 +1,105 @@
+.blog-section {
+  padding-bottom: 80px;
+  @include media-breakpoint-down(lg) {
+    padding-bottom: 40px;
+  }
+}
+.blogItem {
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--light-gray);
+  text-decoration-color: transparent;
+  position: relative;
+  padding-right: 180px;
+  grid-template-rows: auto auto; /* две строки: первая для .blogItem__content, вторая для .p1 */
+  grid-column-gap: 32px;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  @include media-breakpoint-down(lg) {
+    grid-template-columns: 1fr;
+    padding-right: 0;
+    padding-bottom: 40px;
+  }
+  @include media-breakpoint-only(lg) {
+    padding-right: 80px;
+  }
+  &::after {
+    display: none;
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 24px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../images/ico/arrow-right.svg");
+    right: 0;
+    bottom: 12px;
+    transition: all 0.3s;
+    @include media-breakpoint-down(lg) {
+      display: block;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 106px;
+    height: 106px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../images/ico/blog-arrow.svg");
+    right: 24px;
+    bottom: 24px;
+    transition: all 0.3s;
+    @include media-breakpoint-down(xl) {
+      width: 60px;
+      height: 60px;
+      bottom: 16px;
+      right: 16px;
+    }
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
+  &:hover {
+    .h2 {
+      color: var(--dark-pink);
+    }
+  }
+  &__img {
+    max-width: 260px;
+    width: 100%;
+    min-width: 260px;
+    aspect-ratio: 256/266;
+    height: fit-content;
+    grid-row: span 2;
+    @include media-breakpoint-down(lg) {
+      grid-row: 2;
+      max-width: 100%;
+      margin-bottom: 12px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__content {
+    grid-column: 2;
+    @include media-breakpoint-down(lg) {
+      grid-column: 1;
+    }
+    .h2 {
+      margin-bottom: 12px;
+      transition: all 0.3s;
+    }
+  }
+  &__date {
+    color: var(--medium-gray);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    margin-bottom: 16px;
+  }
+}
+.blogItem + .blogItem {
+  margin-top: 32px;
+}

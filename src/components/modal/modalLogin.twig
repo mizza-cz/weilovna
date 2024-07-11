@@ -1,0 +1,66 @@
+<div
+  class="modal fade modalLogin"
+  id="modalLogin"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modalLogin"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modalLogin-header">
+        <div class="modalLogin-header__title">Přihlášení</div>
+        <button
+          type="button"
+          class="close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true"> {% include "@images/close.svg" %} </span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-title">Přihlásit se ke svému účtu</div>
+        <form action="#" class="form formLogin">
+          <div class="row gx-5 gy-lg-4 gy-2">
+            <div class="col-lg-6">
+              <div class="form__box">
+                <label for="emailLogin" class="form-label">
+                  E-mailová adresa
+                </label>
+                <input
+                  id="emailLogin"
+                  name="email"
+                  type="email"
+                  placeholder="E-mailová adresa"
+                />
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form__box">
+                <label for="passLogin" class="form-label"> Heslo </label>
+                <input
+                  id="passLogin"
+                  name="password"
+                  class="password-field"
+                  type="password"
+                  placeholder="Heslo"
+                />
+                <span toggle=".password-field" class="toggle-password">
+                  {% include "@images/eye.svg" %}
+                </span>
+              </div>
+            </div>
+            <div class="col-lg-4 mx-auto">
+              <div class="form-btn">
+                <a class="form-btn__resset" href="#">Nepamatuji si heslo</a>
+
+                <button class="btn">Přihlásit se</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

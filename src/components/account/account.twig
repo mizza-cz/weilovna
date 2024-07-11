@@ -2,6 +2,7 @@
   <div class="account__avatar">
     <img src="images/ico/ava.svg" alt="ava" />
   </div>
+
   <div class="dropdown account__dropdown">
     <button
       class="account__btn"
@@ -12,6 +13,7 @@
     >
       Můj účet {% include "@images/dropdown.svg" %}
     </button>
+
     <ul class="dropdown-menu" aria-labelledby="accountReg">
       <li>
         <a
@@ -29,6 +31,12 @@
       </li>
     </ul>
   </div>
+  <a
+    href="https://mizza-cz.github.io/weilovna/build/06.0_favorites.html"
+    class="account__favorite"
+    >{% include "@images/favorite.svg" %}
+    <span class="favorite-count"></span>
+  </a>
   <a
     href="https://mizza-cz.github.io/weilovna/build/02.0_registration.html"
     class="account__btn"

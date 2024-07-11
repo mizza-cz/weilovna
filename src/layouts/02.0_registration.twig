@@ -1,4 +1,7 @@
 {% extends "@components/base/base.twig" %} {% set title = "02.0_registration" %}
-{% block main %} {% include "@components/navigation/navigation.twig" %} {%
-include "@components/registration-section/registration-section.twig" %} {%
-endblock %}
+{% block main %} {% include "@components/header/header.twig" %}
+<main class="main" aria-label="Hlavní obsah">
+  {% include "@components/navigation/navigation.twig" %} {% include
+  "@components/registration-section/registration-section.twig" %}
+</main>
+{% endblock %}

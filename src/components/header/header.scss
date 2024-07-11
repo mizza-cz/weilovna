@@ -44,7 +44,13 @@
     @include media-breakpoint-down(xl) {
       min-width: auto;
     }
-    @media (max-width: 1100px) {
+    @media only screen and (max-width: 1100px) and (min-width: 480px) {
+      max-width: 14rem;
+      width: 100%;
+      min-width: 84px;
+      height: auto;
+    }
+    @include media-breakpoint-down(md) {
       max-width: 8rem;
       width: 100%;
       min-width: 84px;
@@ -262,6 +268,7 @@
     @include media-breakpoint-down(md) {
       max-width: 100%;
     }
+
     &:hover input {
       border-color: var(--dark-pink);
     }
@@ -281,6 +288,7 @@
     input:target,
     input:hover {
       border-color: var(--dark-pink);
+      border-right: 56px solid var(--dark-pink);
     }
     button {
       position: absolute;
@@ -316,7 +324,7 @@
     max-width: 170px;
     height: 68px;
     width: 100%;
-    @include media-breakpoint-down(lg) {
+    @media (max-width: 1100px) {
       display: none;
     }
     img {
@@ -430,7 +438,7 @@
     transition: all 0.3s;
   }
 }
-/// mobile
+
 .headerMob-info {
   display: none;
   margin-bottom: 12px;
@@ -441,6 +449,7 @@
   .header-info__phone {
     @include media-breakpoint-down(md) {
       padding: 0;
+      padding-left: 20px;
       a {
         font-size: 17px;
         font-weight: 700;

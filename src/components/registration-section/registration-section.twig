@@ -1,51 +1,52 @@
 <section class="registration-section pt-4">
   <div class="container">
-    <h1 class="title mb-3">PŘIHLÁŠENÍ</h1>
-
     <div class="alert alert-success">
       <a href="#" class="close" data-dismiss="alert" aria-label="close"
         >&times;</a
       >
-      <strong>Successfully submitted!</strong> The form is valid.
     </div>
-    <form action="#" class="formLogin form">
-      <div class="row gx-5 gy-lg-4 gy-3">
-        <div class="col-lg-4 col-sm-6">
-          <div class="form__box">
-            <label for="emailLogin" class="form-label">
-              E-mailová adresa
-            </label>
-            <input
-              id="emailLogin"
-              name="email"
-              type="email"
-              placeholder="E-mailová adresa"
-            />
+    <div class="formLogin">
+      <h1 class="title mb-3">PŘIHLÁŠENÍ</h1>
+      <form action="#" class="form">
+        <div class="row gx-5 gy-lg-4 gy-3">
+          <div class="col-lg-4 col-sm-6">
+            <div class="form__box">
+              <label for="emailLogin" class="form-label">
+                E-mailová adresa
+              </label>
+              <input
+                id="emailLogin"
+                name="email"
+                type="email"
+                placeholder="E-mailová adresa"
+              />
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <div class="form__box">
+              <label for="passLogin" class="form-label"> Heslo </label>
+              <input
+                id="passLogin"
+                name="password"
+                class="password-field"
+                type="password"
+                placeholder="Heslo"
+              />
+              <span toggle=".password-field" class="toggle-password">
+                {% include "@images/eye.svg" %}
+              </span>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="form-btn">
+              <button class="btn">Přihlásit se</button>
+              <a class="form-btn__resset" href="#">Nepamatuji si heslo</a>
+            </div>
           </div>
         </div>
-        <div class="col-lg-4 col-sm-6">
-          <div class="form__box">
-            <label for="passLogin" class="form-label"> Heslo </label>
-            <input
-              id="passLogin"
-              name="password"
-              class="password-field"
-              type="password"
-              placeholder="Heslo"
-            />
-            <span toggle=".password-field" class="toggle-password">
-              {% include "@images/eye.svg" %}
-            </span>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="form-btn">
-            <button class="btn">Přihlásit se</button>
-            <a class="form-btn__resset" href="#">Nepamatuji si heslo</a>
-          </div>
-        </div>
-      </div>
-    </form>
+      </form>
+    </div>
+
     <h2 class="title">NOVÁ REGISTRACE</h2>
     <form class="formRegistration form">
       <div class="row gx-lg-5 gx-4 gy-lg-4 gy-3">

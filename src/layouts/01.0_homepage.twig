@@ -1,5 +1,6 @@
 {% extends "@components/base/base.twig" %} {% set title = "01.0_homepage" %} {%
 block main %}
+{% include "@components/header/header.twig" %}
 <div class="main__wrapper">
   {% include "@components/navigation/navigation.twig" %}
   <div class="container">
@@ -14,4 +15,4 @@ block main %}
     </div>
   </div>
 </div>
-{% endblock %}
+{% include "@components/modal/modalLogin.twig" %} {% endblock %}

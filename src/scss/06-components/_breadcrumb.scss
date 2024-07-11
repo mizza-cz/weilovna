@@ -1,0 +1,48 @@
+/*! purgecss start ignore */
+
+.breadcrumb-item:first-child:before {
+  content: "";
+  background-image: url("../images/ico/chevron-right.svg");
+  width: 10px;
+  height: 12px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  right: 0;
+  top: 8px;
+  position: absolute;
+}
+
+.breadcrumb-item {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25.9px;
+  color: var(--blue);
+  position: relative;
+  margin-right: 16px;
+  padding-right: 24px;
+
+  a {
+    text-decoration-color: transparent;
+  }
+  a:hover {
+    text-decoration-color: inherit;
+  }
+}
+.breadcrumb-item.active {
+  color: var(--blue);
+  font-weight: 400;
+  padding: 0;
+}
+.breadcrumb {
+  margin: 38px 0;
+  display: flex;
+  flex-wrap: nowrap;
+  @include media-breakpoint-down(lg) {
+    margin: 24px 0;
+  }
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  display: none;
+  padding-left: 0;
+}
+/*! purgecss end ignore */

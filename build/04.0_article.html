@@ -26,6 +26,7 @@
 
 <body>
 	<div class="base">
+
 		<header class="header">
 			<div class="header__promotion">
 				<div class="container">
@@ -92,7 +93,9 @@
 					<a href="#" target="_blank" class="header-search__ban">
 						<img src="images/content/search-ban.png" loading="lazy" alt="specific" />
 					</a>
-					<a href="#" class="btn loginBtn"> Přihlásit se </a>
+					<a href="#" data-bs-toggle="modal" data-bs-target="#modalLogin" class="btn loginBtn">
+						Přihlásit se
+					</a>
 
 					<h1 class="header-search__title">VŠE, CO HLEDÁTE PRO SVÉHO MAZLÍČKA</h1>
 					<form class="header-search__form">
@@ -131,7 +134,7 @@
 						</a>
 						<div class="account">
 							<div class="account__avatar">
-								<img src="images/ico/ava.svg" alt="ava" />
+								<img src="images/content/ava.png" alt="ava" />
 							</div>
 							<div class="dropdown account__dropdown">
 								<button class="account__btn" type="button" id="accountReg" data-bs-toggle="dropdown" aria-expanded="false">
@@ -140,240 +143,403 @@
 									</svg> </button>
 								<ul class="dropdown-menu" aria-labelledby="accountReg">
 									<li>
-										<a class="dropdown-item" href="https://mizza-cz.github.io/weilovna/build/02.0_registration.html">Přihlásit se</a>
+										<a href="#" class="dropdown-item"> Odhlásit se </a>
 									</li>
 									<li>
-										<a class="dropdown-item" href="https://mizza-cz.github.io/weilovna/build/02.0_registration.html">Registrace
-										</a>
+										<a href="#" class="dropdown-item"> Můj profil </a>
+									</li>
+									<li>
+										<a href="#" class="dropdown-item"> Objednavky </a>
+									</li>
+									<li>
+										<a href="#" class="dropdown-item"> Oblíbené zboží </a>
+									</li>
+									<li>
+										<a href="#" class="dropdown-item"> Znovu objednat </a>
+									</li>
+									<li>
+										<a href="#" class="dropdown-item"> Reklamační řád </a>
 									</li>
 								</ul>
 							</div>
-							<a href="https://mizza-cz.github.io/weilovna/build/02.0_registration.html" class="account__btn">Nová registrace</a>
+							<a href="https://mizza-cz.github.io/weilovna/build/06.0_favorites.html" class="account__favorite"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M4.95 13.908l6.953 6.531c.24.225.36.338.5.366a.5.5 0 00.193 0c.142-.028.261-.14.5-.366l6.953-6.53a5.203 5.203 0 00.549-6.983l-.31-.399c-1.968-2.536-5.918-2.111-7.301.787a.54.54 0 01-.974 0C10.63 4.416 6.68 3.99 4.712 6.527l-.31.4a5.203 5.203 0 00.549 6.981z" stroke="#551237" stroke-width="2" />
+								</svg> <span class="favorite-count"></span>
+							</a>
+							<a href="" class="account__btn flex-column g-4">Znovu objednat
+								<span><svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14 10.405l-4 3.69 4 3.69" stroke="#195079" stroke-width="2" />
+										<path d="M4.206 12.02c-.99-.792-1.388-1.712-1.129-2.618.259-.906 1.158-1.747 2.559-2.393 1.401-.646 3.225-1.061 5.19-1.18 1.963-.12 3.958.063 5.674.52 1.716.457 3.057 1.162 3.815 2.006.758.845.891 1.78.378 2.663-.512.883-1.642 1.663-3.214 2.219-1.572.556-3.498.858-5.479.858" stroke="#195079" stroke-width="2" stroke-linecap="round" />
+									</svg></span>
+							</a>
 						</div>
+
 					</div>
 				</div>
 			</div>
 		</header>
+
 		<main class="main" aria-label="Hlavní obsah">
-			<div class="main__wrapper">
-				<nav class="navbar">
-					<div class="container">
-						<ul class="navbar__menu">
-							<li class="navbar__menu-list">
-								<a href="https://mizza-cz.github.io/weilovna/build/01.0_homepage.html" class="navbar__menu-item">
-									<img src="images/content/home.png" alt="Domů" /> Domů
-								</a>
-							</li>
-							<li class="navbar__menu-list navbar__menu-list--dogs">
-								<div class="navbar__menu-item">Psi</div>
-								<ul class="dropdown-menu">
-									<li class="dropdown-menu__list">
-										<div class="dropdown-menu__item">
-											<a href="#" class="mb-2 text-uppercase fw-bold"> KRMIVA </a>
-											<a href="#">Konzervy a kapsičky</a>
-											<a href="#"> Krmiva suchá</a>
-										</div>
-										<div class="dropdown-menu__item">
-											<a href="#" class="mb-4 text-uppercase fw-bold">
-												NEMOC / DIETA
-											</a>
-										</div>
-										<div class="dropdown-menu__item">
-											<a href="#" class="mb-2 text-uppercase fw-bold"> PAMLSKY </a>
-										</div>
-									</li>
-									<li class="dropdown-menu__list">
-										<div class="dropdown-menu__item">
-											<a href="#" class="mb-2 text-uppercase fw-bold">
-												Specialní kosmetika
-											</a>
-											<div class="row">
-												<div class="col-6">
-													<a href="#">Obojek</a>
-													<a href="#">Difuzér</a>
-													<a href="#">Šampon</a>
-													<a href="#">Pěna</a>
-													<a href="#">Roztoky</a>
-												</div>
-												<div class="col-6">
-													<a href="#">Sprej</a>
-													<a href="#">Koncentrát</a>
-													<a href="#">Mast</a>
-													<a href="#">Gel</a>
-													<a href="#">Ubrousky</a>
-												</div>
+			<nav class="navbar">
+				<div class="container">
+					<ul class="navbar__menu">
+						<li class="navbar__menu-list">
+							<a href="https://mizza-cz.github.io/weilovna/build/01.0_homepage.html" class="navbar__menu-item">
+								<img src="images/content/home.png" alt="Domů" /> Domů
+							</a>
+						</li>
+						<li class="navbar__menu-list navbar__menu-list--dogs">
+							<div class="navbar__menu-item">Psi</div>
+							<ul class="dropdown-menu">
+								<li class="dropdown-menu__list">
+									<div class="dropdown-menu__item">
+										<a href="#" class="mb-2 text-uppercase fw-bold"> KRMIVA </a>
+										<a href="#">Konzervy a kapsičky</a>
+										<a href="#"> Krmiva suchá</a>
+									</div>
+									<div class="dropdown-menu__item">
+										<a href="#" class="mb-4 text-uppercase fw-bold">
+											NEMOC / DIETA
+										</a>
+									</div>
+									<div class="dropdown-menu__item">
+										<a href="#" class="mb-2 text-uppercase fw-bold"> PAMLSKY </a>
+									</div>
+								</li>
+								<li class="dropdown-menu__list">
+									<div class="dropdown-menu__item">
+										<a href="#" class="mb-2 text-uppercase fw-bold">
+											Specialní kosmetika
+										</a>
+										<div class="row">
+											<div class="col-6">
+												<a href="#">Obojek</a>
+												<a href="#">Difuzér</a>
+												<a href="#">Šampon</a>
+												<a href="#">Pěna</a>
+												<a href="#">Roztoky</a>
+											</div>
+											<div class="col-6">
+												<a href="#">Sprej</a>
+												<a href="#">Koncentrát</a>
+												<a href="#">Mast</a>
+												<a href="#">Gel</a>
+												<a href="#">Ubrousky</a>
 											</div>
 										</div>
-									</li>
-									<li class="dropdown-menu__list">
-										<div class="dropdown-menu__item">
-											<a href="#" class="mb-2 text-uppercase fw-bold">
-												ANTIPARAZITIKA
-											</a>
-											<a href="#">Roztok (+spot-on)</a>
-											<a href="#">Pasta</a>
-											<a href="#">Tableta</a>
-											<a href="#">Sprej</a>
-											<a href="#">Obojek</a>
-											<a href="#">Šampon</a>
-										</div>
-									</li>
-									<li class="dropdown-menu__list">
-										<div class="dropdown-menu__item">
-											<a href="#" class="mb-2 text-uppercase fw-bold"> VÝŽIVA </a>
-										</div>
-										<div class="dropdown-menu__item">
-											<a href="#" class="mb-2 text-uppercase fw-bold">OSTATNÍ</a>
-											<a href="#">bandáž</a>
-										</div>
-									</li>
-								</ul>
-							</li>
-							<li class="navbar__menu-list navbar__menu-list--cats">
-								<div class="navbar__menu-item">Kočky</div>
-								<ul class="dropdown-menu">
-									<li class="dropdown-menu__list">
-										<div class="dropdown-menu__item">
-											<a href="#" class="mb-2 text-uppercase fw-bold"> KRMIVA </a>
-											<a href="#">Konzervy a kapsičky</a>
-											<a href="#"> Krmiva suchá</a>
-										</div>
-										<div class="dropdown-menu__item">
-											<a href="#" class="mb-2 text-uppercase fw-bold">
-												NEMOC / DIETA
-											</a>
-										</div>
-										<div class="dropdown-menu__item">
-											<a href="#" class="mb-2 text-uppercase fw-bold"> PAMLSKY </a>
-										</div>
-									</li>
-									<li class="dropdown-menu__list">
-										<div class="dropdown-menu__item">
-											<a href="#" class="mb-2 text-uppercase fw-bold">
-												Specialní kosmetika
-											</a>
-											<div class="row">
-												<div class="col-6">
-													<a href="#">Obojek</a>
-													<a href="#">Difuzér</a>
-													<a href="#">Šampon</a>
-													<a href="#">Pěna</a>
-													<a href="#">Roztoky</a>
-												</div>
-												<div class="col-6">
-													<a href="#">Sprej</a>
-													<a href="#">Koncentrát</a>
-													<a href="#">Mast</a>
-													<a href="#">Gel</a>
-													<a href="#">Ubrousky</a>
-												</div>
+									</div>
+								</li>
+								<li class="dropdown-menu__list">
+									<div class="dropdown-menu__item">
+										<a href="#" class="mb-2 text-uppercase fw-bold">
+											ANTIPARAZITIKA
+										</a>
+										<a href="#">Roztok (+spot-on)</a>
+										<a href="#">Pasta</a>
+										<a href="#">Tableta</a>
+										<a href="#">Sprej</a>
+										<a href="#">Obojek</a>
+										<a href="#">Šampon</a>
+									</div>
+								</li>
+								<li class="dropdown-menu__list">
+									<div class="dropdown-menu__item">
+										<a href="#" class="mb-2 text-uppercase fw-bold"> VÝŽIVA </a>
+									</div>
+									<div class="dropdown-menu__item">
+										<a href="#" class="mb-2 text-uppercase fw-bold">OSTATNÍ</a>
+										<a href="#">bandáž</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li class="navbar__menu-list navbar__menu-list--cats">
+							<div class="navbar__menu-item">Kočky</div>
+							<ul class="dropdown-menu">
+								<li class="dropdown-menu__list">
+									<div class="dropdown-menu__item">
+										<a href="#" class="mb-2 text-uppercase fw-bold"> KRMIVA </a>
+										<a href="#">Konzervy a kapsičky</a>
+										<a href="#"> Krmiva suchá</a>
+									</div>
+									<div class="dropdown-menu__item">
+										<a href="#" class="mb-2 text-uppercase fw-bold">
+											NEMOC / DIETA
+										</a>
+									</div>
+									<div class="dropdown-menu__item">
+										<a href="#" class="mb-2 text-uppercase fw-bold"> PAMLSKY </a>
+									</div>
+								</li>
+								<li class="dropdown-menu__list">
+									<div class="dropdown-menu__item">
+										<a href="#" class="mb-2 text-uppercase fw-bold">
+											Specialní kosmetika
+										</a>
+										<div class="row">
+											<div class="col-6">
+												<a href="#">Obojek</a>
+												<a href="#">Difuzér</a>
+												<a href="#">Šampon</a>
+												<a href="#">Pěna</a>
+												<a href="#">Roztoky</a>
+											</div>
+											<div class="col-6">
+												<a href="#">Sprej</a>
+												<a href="#">Koncentrát</a>
+												<a href="#">Mast</a>
+												<a href="#">Gel</a>
+												<a href="#">Ubrousky</a>
 											</div>
 										</div>
+									</div>
+								</li>
+								<li class="dropdown-menu__list">
+									<div class="dropdown-menu__item">
+										<a href="#" class="mb-2 text-uppercase fw-bold">
+											ANTIPARAZITIKA
+										</a>
+										<a href="#">Roztok (+spot-on)</a>
+										<a href="#">Pasta</a>
+										<a href="#">Tableta</a>
+										<a href="#">Sprej</a>
+										<a href="#">Obojek</a>
+										<a href="#">Šampon</a>
+									</div>
+								</li>
+								<li class="dropdown-menu__list">
+									<div class="dropdown-menu__item">
+										<a href="#" class="mb-2 text-uppercase fw-bold"> VÝŽIVA </a>
+									</div>
+									<div class="dropdown-menu__item">
+										<a href="#" class="mb-2 text-uppercase fw-bold">OSTATNÍ</a>
+										<a href="#">bandáž</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li class="navbar__menu-list navbar__menu-list--horses">
+							<div class="navbar__menu-item">Koně</div>
+							<ul class="dropdown-menu">
+								<li class="dropdown-menu__list">
+									<div class="dropdown-menu__item">
+										<a href="#" class="mb-2 text-uppercase fw-bold">
+											Specialní kosmetika
+										</a>
+										<a href="#">Mast</a>
+										<a href="#">Roztok</a>
+										<a href="#">Sprej</a>
+										<a href="#">Šampon</a>
+										<a href="#">Emulze</a>
+										<a href="#">Gel</a>
+									</div>
+								</li>
+								<li class="dropdown-menu__list">
+									<div class="dropdown-menu__item">
+										<a href="#" class="mb-2 text-uppercase fw-bold"> VÝŽIVA </a>
+										<a href="#">Pasta</a>
+										<a href="#">Prášek</a>
+										<a href="#">Sirup</a>
+										<a href="#">Tableta</a>
+										<a href="#">Emulze</a>
+										<a href="#">Olej</a>
+									</div>
+								</li>
+								<li class="dropdown-menu__list">
+									<div class="dropdown-menu__item">
+										<a href="#" class="mb-2 text-uppercase fw-bold">
+											ANTIPARAZITIKA
+										</a>
+										<a href="#">Roztok</a>
+										<a href="#">Sprej</a>
+										<a href="#">Gel</a>
+									</div>
+									<div class="dropdown-menu__item">
+										<a href="#" class="mb-2 text-uppercase fw-bold"> OSTATNÍ </a>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li class="navbar__menu-list navbar__menu-list--icons">
+							<div class="navbar__menu-item">Ostatní zvířata</div>
+							<ul class="dropdown-menu">
+								<li class="dropdown-menu__list">
+									<div class="dropdown-menu__item">
+										<a class="icon icon--poultry" href="#">DRŮBEŽ </a>
+										<a class="icon icon--ferret" href="#">Fretka </a>
+										<a class="icon icon--rodent" href="#">Hlodavci </a>
+										<a class="icon icon--goat" href="#">Kozy </a>
+									</div>
+								</li>
+								<li class="dropdown-menu__list">
+									<div class="dropdown-menu__item">
+										<a class="icon icon--rabbit" href="#">KRÁLÍCI </a>
+										<a class="icon icon--sheep" href="#">OVCE </a>
+										<a class="icon icon--reptile" href="#">PLAZI </a>
+										<a class="icon icon--pig" href="#">PRASATA </a>
+									</div>
+								</li>
+								<li class="dropdown-menu__list">
+									<div class="dropdown-menu__item">
+										<a class="icon icon--bird" href="#">PTáci </a>
+										<a class="icon icon--cattle" href="#">skot </a>
+										<a class="icon icon--animals" href="#">OSTATNÍ <br />
+											DRUHY ZVÍŘAT
+										</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li class="navbar__menu-list">
+							<a href="#" class="navbar__menu-item">Blog</a>
+						</li>
+					</ul>
+				</div>
+				<div class="navbar__btn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M18 6L6 18M6 6l12 12" stroke="#195079" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+					</svg></div>
+			</nav>
+			<section class="article-section">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="#">Blog</a></li>
+									<li class="breadcrumb-item active" aria-current="page">
+										Domestikace psa a adaptace jeho genomu na dietu bohatou na škroby
 									</li>
-									<li class="dropdown-menu__list">
-										<div class="dropdown-menu__item">
-											<a href="#" class="mb-2 text-uppercase fw-bold">
-												ANTIPARAZITIKA
-											</a>
-											<a href="#">Roztok (+spot-on)</a>
-											<a href="#">Pasta</a>
-											<a href="#">Tableta</a>
-											<a href="#">Sprej</a>
-											<a href="#">Obojek</a>
-											<a href="#">Šampon</a>
-										</div>
-									</li>
-									<li class="dropdown-menu__list">
-										<div class="dropdown-menu__item">
-											<a href="#" class="mb-2 text-uppercase fw-bold"> VÝŽIVA </a>
-										</div>
-										<div class="dropdown-menu__item">
-											<a href="#" class="mb-2 text-uppercase fw-bold">OSTATNÍ</a>
-											<a href="#">bandáž</a>
-										</div>
-									</li>
-								</ul>
-							</li>
-							<li class="navbar__menu-list navbar__menu-list--horses">
-								<div class="navbar__menu-item">Koně</div>
-								<ul class="dropdown-menu">
-									<li class="dropdown-menu__list">
-										<div class="dropdown-menu__item">
-											<a href="#" class="mb-2 text-uppercase fw-bold">
-												Specialní kosmetika
-											</a>
-											<a href="#">Mast</a>
-											<a href="#">Roztok</a>
-											<a href="#">Sprej</a>
-											<a href="#">Šampon</a>
-											<a href="#">Emulze</a>
-											<a href="#">Gel</a>
-										</div>
-									</li>
-									<li class="dropdown-menu__list">
-										<div class="dropdown-menu__item">
-											<a href="#" class="mb-2 text-uppercase fw-bold"> VÝŽIVA </a>
-											<a href="#">Pasta</a>
-											<a href="#">Prášek</a>
-											<a href="#">Sirup</a>
-											<a href="#">Tableta</a>
-											<a href="#">Emulze</a>
-											<a href="#">Olej</a>
-										</div>
-									</li>
-									<li class="dropdown-menu__list">
-										<div class="dropdown-menu__item">
-											<a href="#" class="mb-2 text-uppercase fw-bold">
-												ANTIPARAZITIKA
-											</a>
-											<a href="#">Roztok</a>
-											<a href="#">Sprej</a>
-											<a href="#">Gel</a>
-										</div>
-										<div class="dropdown-menu__item">
-											<a href="#" class="mb-2 text-uppercase fw-bold"> OSTATNÍ </a>
-										</div>
-									</li>
-								</ul>
-							</li>
-							<li class="navbar__menu-list navbar__menu-list--icons">
-								<div class="navbar__menu-item">Ostatní zvířata</div>
-								<ul class="dropdown-menu">
-									<li class="dropdown-menu__list">
-										<div class="dropdown-menu__item">
-											<a class="icon icon--poultry" href="#">DRŮBEŽ </a>
-											<a class="icon icon--ferret" href="#">Fretka </a>
-											<a class="icon icon--rodent" href="#">Hlodavci </a>
-											<a class="icon icon--goat" href="#">Kozy </a>
-										</div>
-									</li>
-									<li class="dropdown-menu__list">
-										<div class="dropdown-menu__item">
-											<a class="icon icon--rabbit" href="#">KRÁLÍCI </a>
-											<a class="icon icon--sheep" href="#">OVCE </a>
-											<a class="icon icon--reptile" href="#">PLAZI </a>
-											<a class="icon icon--pig" href="#">PRASATA </a>
-										</div>
-									</li>
-									<li class="dropdown-menu__list">
-										<div class="dropdown-menu__item">
-											<a class="icon icon--bird" href="#">PTáci </a>
-											<a class="icon icon--cattle" href="#">skot </a>
-											<a class="icon icon--animals" href="#">OSTATNÍ <br />
-												DRUHY ZVÍŘAT
-											</a>
-										</div>
-									</li>
-								</ul>
-							</li>
-							<li class="navbar__menu-list">
-								<a href="#" class="navbar__menu-item">Blog</a>
-							</li>
-						</ul>
+								</ol>
+							</nav>
+						</div>
+						<div class="col-lg-10 mx-auto ">
+							<h1>
+								Domestikace psa a adaptace jeho genomu na dietu bohatou na škroby
+							</h1>
+							<div class="article-section__date">13. 11. 2023</div>
+							<div class="article-section__img">
+								<img src="images/content/article-1.png" loading="lazy" alt="article-1" />
+							</div>
+						</div>
+						<div class="col-lg-8 col-md-10 mx-auto">
+							<p>
+								Domestikace psa byla důležitou epizodou ve vývoji lidské civilizace.
+								Přesné místo a období této události jsou předmětem debat, kdy v tomto
+								článku najdete v Referencích odkazy na články, zabývající se právě
+								těmito tématy. Obecně je také velmi málo informací ohledně
+								genetických změn, které přeměnu pravěkého vlka ve psa provázely.
+							</p>
+							<p>
+								Do současné doby byla identifikována pouze hrstka genů, které odlišují
+								domestikované formy zvířat od jejich divokých předchůdců a zatím se
+								výzkumy věnovaly hlavně jiným živočišným druhům, např. prasatům a kuru
+								domácímu. U psů však doposud nebyl žádný průzkum genomu uskutečněn.
+							</p>
+							<p>
+								V tomto článku naleznete poměrně nové informace věnované skupině genů,
+								které ovlivňují trávení škrobu a metabolismu tuků, a vykazují známky
+								selekce.
+							</p>
+							<p>
+								Aby k takovému nálezu mohlo dojít, bylo nejprve nutné identifikovat
+								oblasti genomu, které se změnily během domestikace a k tomu bylo
+								potřeba sekvenovat celý genom psa a vlka.
+							</p>
+							<p>
+								Podrobnosti o těchto speciálních genech a jejich funkcích
+								u domestikovaných psů naleznete v článku s tím, že je určitě velmi
+								zajímavé, ponořit se do této problematiky i hlouběji. K tomu je možno
+								využít odkazy na články v závěru článku.
+							</p>
+							<div class="article-section__author">Axelsson E. a kol.</div>
+						</div>
 					</div>
-				</nav>
-			</div>
+				</div>
+				<div class="article-section__img">
+					<img src="images/content/article-2.png" loading="lazy" alt="article-2" />
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-md-10 mx-auto">
+							<p>
+								Není jasné, kdy a jak byl pes domestikován. Lidé mohli vychovávat
+								polapená vlčí štěňata a využívat je ke hlídání nebo lovu. Postupně se
+								naučili selektovat u nich žádoucí vlastnosti. Jinou možností je, že
+								s tím, jak se nomádi postupně usazovali a stávali se zemědělci, mohli
+								být vlci sami vábeni zbytky potravy k osadám6. Přirozenou selekcí
+								a adaptací na tento nový zdroj potravy mohly vzniknout skupiny
+								mrchožravých vlků, kteří se stali předchůdci moderních psů. Bez ohledu
+								na to, jak domestikace začala, se moderní psi liší od vlků v několika
+								ohledech. Je to např. snížená agresivita a změněné sociální chování7.
+								Většina poznatků nasvědčuje tomu, že změny chování byly v celém
+								procesu tím hlavním6. Psi se od vlků liší také morfologicky – mají
+								menší velikost hlavy, zubů a mozku6. Na umělé selekci nižší plachosti
+								u stříbrných lišek je zřejmé, že má vliv jak na morfologické, tak na
+								behaviorální vlastnosti populace. Je to zřejmě důležitý mechanismus
+								celé zvířecí domestikace.
+							</p>
+							<p>
+								Do současné doby byla identifikována pouze hrstka genů, které odlišují
+								domestikované formy zvířat od jejich divokých předchůdců. Je to
+								například variabilita v barvě srsti MC1R u prasat9 a mutace v TSRH,
+								která pravděpodobně ovlivňuje sezónní reprodukci u kura10. U psů však
+								doposud nebyl žádný průzkum genomu uskutečněn. Abychom mohli
+								identifikovat oblasti genomu, které se změnily během domestikace,
+								sekvenovali jsme celý genom psa a vlka a následně charakterizovali
+								vybrané geny.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
+		<div class="modal fade modalLogin" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLogin" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modalLogin-header">
+						<div class="modalLogin-header__title">Přihlášení</div>
+						<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M18 6L6 18M6 6l12 12" stroke="#195079" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+								</svg> </span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-title">Přihlásit se ke svému účtu</div>
+						<form action="#" class="form formLogin">
+							<div class="row gx-5 gy-lg-4 gy-2">
+								<div class="col-lg-6">
+									<div class="form__box">
+										<label for="emailLogin" class="form-label">
+											E-mailová adresa
+										</label>
+										<input id="emailLogin" name="email" type="email" placeholder="E-mailová adresa" />
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="form__box">
+										<label for="passLogin" class="form-label"> Heslo </label>
+										<input id="passLogin" name="password" class="password-field" type="password" placeholder="Heslo" />
+										<span toggle=".password-field" class="toggle-password">
+											<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<circle cx="12.21" cy="12" r="3" stroke="#98999A" stroke-width="2" />
+												<path d="M20.4 10.934c.388.472.582.707.582 1.066 0 .359-.194.594-.582 1.066C18.98 14.79 15.846 18 12.21 18c-3.635 0-6.768-3.21-8.188-4.934-.388-.472-.582-.707-.582-1.066 0-.359.194-.594.582-1.066C5.443 9.21 8.576 6 12.211 6c3.636 0 6.768 3.21 8.188 4.934z" stroke="#98999A" stroke-width="2" />
+											</svg> </span>
+									</div>
+								</div>
+								<div class="col-lg-4 mx-auto">
+									<div class="form-btn">
+										<a class="form-btn__resset" href="#">Nepamatuji si heslo</a>
+
+										<button class="btn">Přihlásit se</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
 		<footer class="footer">
 			<div class="container">
 				<div class="footer-head">

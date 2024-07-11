@@ -1,0 +1,48 @@
+<div class="account">
+  <div class="account__avatar">
+    <img src="images/content/ava.png" alt="ava" />
+  </div>
+  <div class="dropdown account__dropdown">
+    <button
+      class="account__btn"
+      type="button"
+      id="accountReg"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Můj účet {% include "@images/dropdown.svg" %}
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="accountReg">
+      <li>
+        <a href="#" class="dropdown-item"> Odhlásit se </a>
+      </li>
+      <li>
+        <a href="#" class="dropdown-item"> Můj profil </a>
+      </li>
+      <li>
+        <a href="#" class="dropdown-item"> Objednavky </a>
+      </li>
+      <li>
+        <a href="#" class="dropdown-item"> Oblíbené zboží </a>
+      </li>
+      <li>
+        <a href="#" class="dropdown-item"> Znovu objednat </a>
+      </li>
+      <li>
+        <a href="#" class="dropdown-item"> Reklamační řád </a>
+      </li>
+    </ul>
+  </div>
+  <a
+    href="https://mizza-cz.github.io/weilovna/build/06.0_favorites.html"
+    class="account__favorite"
+    >{% include "@images/favorite.svg" %}
+    <span class="favorite-count"></span>
+  </a>
+  <a href="" class="account__btn flex-column g-4"
+    >Znovu objednat
+    <span>{% include "@images/circle.svg" %}</span>
+  </a>
+</div>
+
+ 

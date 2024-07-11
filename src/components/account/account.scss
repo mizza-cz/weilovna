@@ -4,7 +4,7 @@
   margin-top: 32px;
   border-radius: 8px;
   box-shadow: 0px 0px 6px 0px rgba(36, 36, 36, 0.15);
-  padding: 20px 12px;
+  padding: 20px 12px 12px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -50,6 +50,9 @@
     svg path {
       stroke: var(--blue);
     }
+    span {
+      display: block;
+    }
   }
   .dropdown-menu {
     padding: 16px 30px;
@@ -81,5 +84,39 @@
     display: block;
     overflow: visible;
     opacity: 1;
+  }
+}
+
+.account__favorite {
+  position: relative;
+  display: none;
+  .favorite-count {
+    background-color: var(--color-light);
+    box-shadow: 0px 2px 6px 0px #24242426;
+    border-radius: 50%;
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: var(--pink);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.77px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    right: -12px;
+    top: -4px;
+    min-width: 24px;
+    height: 24px;
+  }
+  svg {
+    fill: var(--pink);
+    stroke: var(--pink);
+    width: 2.2rem;
+    height: 2rem;
+    path {
+      fill: var(--pink);
+      stroke: var(--pink);
+    }
   }
 }

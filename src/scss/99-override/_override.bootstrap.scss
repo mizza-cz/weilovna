@@ -36,4 +36,13 @@
 .gx-5 {
   --bs-gutter-x: 2rem;
 }
+.g-md-6 {
+  --bs-gutter-x: 40px;
+  --bs-gutter-y: 40px;
+  @include media-breakpoint-down(lg) {
+    --bs-gutter-x: 24px;
+    --bs-gutter-y: 0;
+  }
+}
+
 /*! purgecss end ignore */

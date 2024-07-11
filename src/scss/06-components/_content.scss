@@ -11,3 +11,29 @@
     margin-bottom: 0;
   }
 }
+
+.h1,
+.o-content h1 {
+}
+
+.h2,
+.o-content h2 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 41.44px;
+  color: var(--color-text);
+  @include media-breakpoint-down(lg) {
+    font-size: 28px;
+    line-height: normal;
+  }
+}
+
+.p1 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  @include media-breakpoint-down(lg) {
+    font-size: 20px;
+    line-height: normal;
+  }
+}

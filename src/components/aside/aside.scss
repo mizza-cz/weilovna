@@ -41,4 +41,9 @@
   height: 24px;
   margin-top: 8px;
   cursor: pointer;
+  transition: all 0.1;
+}
+
+.asideBtn.active {
+  transform: rotate(-180deg);
 }

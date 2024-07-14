@@ -3,24 +3,39 @@ const asideProductsContainer = document.querySelector(".aside__products");
 if (asideProductsContainer) {
   const products = document.querySelectorAll(".asideProduct");
   const buttonMore = document.querySelector(".asideBtn");
-  let visibleCount = 3;
+  let isExpanded = false;
 
-  function showProducts() {
+  function showInitialProducts() {
     products.forEach((product, index) => {
-      if (index < visibleCount) {
+      if (index < 3) {
         product.classList.add("visible");
+      } else {
+        product.classList.remove("visible");
       }
     });
-
-    if (visibleCount >= products.length) {
-      buttonMore.style.display = "none";
-    }
+    buttonMore.style.display = "block";
   }
 
-  buttonMore.addEventListener("click", function () {
-    visibleCount += 3;
-    showProducts();
-  });
+  function toggleProducts() {
+    if (isExpanded) {
+      products.forEach((product, index) => {
+        if (index >= 3) {
+          product.classList.remove("visible");
+        }
+      });
+      buttonMore.classList.remove("active");
+    } else {
+      products.forEach((product, index) => {
+        if (index >= 3 && index < 6) {
+          product.classList.add("visible");
+        }
+      });
+      buttonMore.classList.add("active");
+    }
+    isExpanded = !isExpanded;
+  }
 
-  showProducts();
+  buttonMore.addEventListener("click", toggleProducts);
+
+  showInitialProducts();
 }

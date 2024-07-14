@@ -37,7 +37,7 @@
     gap: 16px;
   }
   &__ban {
-    height: 110px;
+    height: 120px;
     width: 280px;
     max-width: 19rem;
     min-width: 19rem;
@@ -59,6 +59,7 @@
     img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
   }
   &__phone {

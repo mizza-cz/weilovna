@@ -89,13 +89,18 @@
 						</a>
 					</div>
 				</div>
-				<div class="header-search">
+				<div class="header-search d-none d-lg-flex">
 					<a href="#" target="_blank" class="header-search__ban">
 						<img src="images/content/search-ban.png" loading="lazy" alt="specific" />
 					</a>
-					<a href="#" data-bs-toggle="modal" data-bs-target="#modalLogin" class="btn loginBtn">
-						Přihlásit se
-					</a>
+					<!-- <a
+        href="#"
+        data-bs-toggle="modal"
+        data-bs-target="#modalLogin"
+        class="btn loginBtn"
+      >
+        Přihlásit se
+      </a> -->
 
 					<h1 class="header-search__title">VŠE, CO HLEDÁTE PRO SVÉHO MAZLÍČKA</h1>
 					<form class="header-search__form">
@@ -399,360 +404,139 @@
 						<path d="M18 6L6 18M6 6l12 12" stroke="#195079" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 					</svg></div>
 			</nav>
-			<section class="orders-section pt-4">
+			<section class="order-detail">
 				<div class="container">
 					<h1 class="title text-center mb-3">Moje objednávky</h1>
-					<div class="orders-section__inner">
-						<div class="ordersItem">
-							<ul class="ordersItem__list">
-								<li class="ordersItem__date">
-									<div class="ordersItem__title">Datum</div>
-									<div class="ordersItem__num">10.2.2024</div>
-									<a href="images/content/product-1.png" download class="ordersItem__link">
-										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M12 14l-.707.707a1 1 0 001.414 0L12 14zm1-9a1 1 0 10-2 0h2zM6.293 9.707l5 5 1.414-1.414-5-5-1.414 1.414zm6.414 5l5-5-1.414-1.414-5 5 1.414 1.414zM13 14V5h-2v9h2z" fill="#195079" />
-											<path d="M5 16v1a2 2 0 002 2h10a2 2 0 002-2v-1" stroke="#195079" stroke-width="2" />
-										</svg> <span> Stáhnout fakturu</span>
-									</a>
-								</li>
-								<li>
-									<div class="ordersItem__title">Čislo objednávky</div>
-									<div class="ordersItem__num">111222024</div>
-								</li>
-								<li class="ordersItem__products">
-									<ul class="ordersItem__products-list">
-										<li>
-											<img src="images/content/product-1.png" loading="lazy" alt="product" />
-										</li>
-										<li>
-											<img src="images/content/product-1.png" loading="lazy" alt="product" />
-										</li>
-										<li>
-											<img src="images/content/product-1.png" loading="lazy" alt="product" />
-										</li>
-										<li>
-											<img src="images/content/product-1.png" loading="lazy" alt="product" />
-										</li>
-									</ul>
-									<a href="#" class="ordersItem__link">
-										<svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M14 10.405l-4 3.69 4 3.69" stroke="#195079" stroke-width="2" />
-											<path d="M4.206 12.02c-.99-.792-1.388-1.712-1.129-2.618.259-.906 1.158-1.747 2.559-2.393 1.401-.646 3.225-1.061 5.19-1.18 1.963-.12 3.958.063 5.674.52 1.716.457 3.057 1.162 3.815 2.006.758.845.891 1.78.378 2.663-.512.883-1.642 1.663-3.214 2.219-1.572.556-3.498.858-5.479.858" stroke="#195079" stroke-width="2" stroke-linecap="round" />
-										</svg> <span>Znovu objednat</span>
-									</a>
-								</li>
-								<li class="ordersItem__price">
-									<div class="ms-xl-auto w-content">
-										<div class="ordersItem__title">Cena</div>
-										<div class="ordersItem__num">3 568 kč</div>
-									</div>
-									<a href="#" class="ordersItem__link">
-										<span> Detaily objednávky</span> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M20 12l.707-.707.707.707-.707.707L20 12zM5 13a1 1 0 110-2v2zm9.707-7.707l6 6-1.414 1.414-6-6 1.414-1.414zm6 7.414l-6 6-1.414-1.414 6-6 1.414 1.414zM20 13H5v-2h15v2z" fill="#195079" />
-										</svg></a>
-								</li>
-							</ul>
+					<div class="order-detail__number">
+						Čislo objednávky <strong>111222024</strong>
+					</div>
+					<div class="order-detail__wrapper">
+						<ul class="order-detail__links">
+							<li>
+								<a class="order-detail__links-download" href="images/content/product-1.png" download="">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M12 14l-.707.707a1 1 0 001.414 0L12 14zm1-9a1 1 0 10-2 0h2zM6.293 9.707l5 5 1.414-1.414-5-5-1.414 1.414zm6.414 5l5-5-1.414-1.414-5 5 1.414 1.414zM13 14V5h-2v9h2z" fill="#195079" />
+										<path d="M5 16v1a2 2 0 002 2h10a2 2 0 002-2v-1" stroke="#195079" stroke-width="2" />
+									</svg> <span> Stáhnout fakturu</span>
+								</a>
+							</li>
+							<li>
+								<a class="order-detail__links-orders" href="#">
+									<svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14 10.405l-4 3.69 4 3.69" stroke="#195079" stroke-width="2" />
+										<path d="M4.206 12.02c-.99-.792-1.388-1.712-1.129-2.618.259-.906 1.158-1.747 2.559-2.393 1.401-.646 3.225-1.061 5.19-1.18 1.963-.12 3.958.063 5.674.52 1.716.457 3.057 1.162 3.815 2.006.758.845.891 1.78.378 2.663-.512.883-1.642 1.663-3.214 2.219-1.572.556-3.498.858-5.479.858" stroke="#195079" stroke-width="2" stroke-linecap="round" />
+									</svg> <span>Znovu objednat</span>
+								</a>
+							</li>
+						</ul>
+						<div class="orderInfo">
+							<h2 class="orderInfo__title">Ing. Petr Novák</h2>
+							<div class="orderInfo__inner">
+								<ul class="orderInfo__list">
+									<li>
+										<h3>Fakturační adresa:</h3>
+									</li>
+									<li>Na Viničkách 508,</li>
+									<li>267 06 Hýskov</li>
+								</ul>
+								<ul class="orderInfo__list">
+									<li>
+										<h3>Kontaktní údaje:</h3>
+									</li>
+									<li>tel.: <a href="tel:+420111222333">+420 111222333</a></li>
+									<li><a href="mailto:e-mail@seznam.cz ">e-mail@seznam.cz </a></li>
+								</ul>
+
+								<ul class="orderInfo__list">
+									<li>
+										<h3>Firma:</h3>
+									</li>
+									<li>Sogno Reale</li>
+									<li>IČO: 07298871</li>
+								</ul>
+								<ul class="orderInfo__list">
+									<li>
+										<h3>Objednávka:</h3>
+									</li>
+									<li>Doprava PPL</li>
+									<li>Platba kartou</li>
+									<li>Stav: Nová</li>
+								</ul>
+							</div>
 						</div>
-						<div class="ordersItem">
-							<ul class="ordersItem__list">
-								<li class="ordersItem__date">
-									<div class="ordersItem__title">Datum</div>
-									<div class="ordersItem__num">10.2.2024</div>
-									<a href="images/content/product-1.png" download class="ordersItem__link">
-										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M12 14l-.707.707a1 1 0 001.414 0L12 14zm1-9a1 1 0 10-2 0h2zM6.293 9.707l5 5 1.414-1.414-5-5-1.414 1.414zm6.414 5l5-5-1.414-1.414-5 5 1.414 1.414zM13 14V5h-2v9h2z" fill="#195079" />
-											<path d="M5 16v1a2 2 0 002 2h10a2 2 0 002-2v-1" stroke="#195079" stroke-width="2" />
-										</svg> <span> Stáhnout fakturu</span>
-									</a>
-								</li>
-								<li>
-									<div class="ordersItem__title">Čislo objednávky</div>
-									<div class="ordersItem__num">111222024</div>
-								</li>
-								<li class="ordersItem__products">
-									<ul class="ordersItem__products-list">
-										<li>
-											<img src="images/content/product-1.png" loading="lazy" alt="product" />
-										</li>
-										<li>
-											<img src="images/content/product-1.png" loading="lazy" alt="product" />
-										</li>
-										<li>
-											<img src="images/content/product-1.png" loading="lazy" alt="product" />
-										</li>
-										<li>
-											<img src="images/content/product-1.png" loading="lazy" alt="product" />
-										</li>
-									</ul>
-									<a href="#" class="ordersItem__link">
-										<svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M14 10.405l-4 3.69 4 3.69" stroke="#195079" stroke-width="2" />
-											<path d="M4.206 12.02c-.99-.792-1.388-1.712-1.129-2.618.259-.906 1.158-1.747 2.559-2.393 1.401-.646 3.225-1.061 5.19-1.18 1.963-.12 3.958.063 5.674.52 1.716.457 3.057 1.162 3.815 2.006.758.845.891 1.78.378 2.663-.512.883-1.642 1.663-3.214 2.219-1.572.556-3.498.858-5.479.858" stroke="#195079" stroke-width="2" stroke-linecap="round" />
-										</svg> <span>Znovu objednat</span>
-									</a>
-								</li>
-								<li class="ordersItem__price">
-									<div class="ms-xl-auto w-content">
-										<div class="ordersItem__title">Cena</div>
-										<div class="ordersItem__num">3 568 kč</div>
-									</div>
-									<a href="#" class="ordersItem__link">
-										<span> Detaily objednávky</span> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M20 12l.707-.707.707.707-.707.707L20 12zM5 13a1 1 0 110-2v2zm9.707-7.707l6 6-1.414 1.414-6-6 1.414-1.414zm6 7.414l-6 6-1.414-1.414 6-6 1.414 1.414zM20 13H5v-2h15v2z" fill="#195079" />
-										</svg></a>
-								</li>
-							</ul>
+						<div class="orderTable">
+							<table>
+								<thead>
+									<tr>
+										<th>Produkt</th>
+										<th>Množství</th>
+										<th>Jedn. cena</th>
+										<th>Celkem</th>
+										<th>DPH</th>
+										<th>Cena celkem s DPH</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>
+											<span>Produkt:</span> <strong>SPECIFIC CPD-M</strong> Puppy
+											Medium Breed 4 kg
+										</td>
+										<td><span>Množství</span> 1</td>
+										<td><span>Jedn. cena bez DPH</span> 590,61</td>
+										<td><span>Sazba DPH</span> 590,61</td>
+										<td><span>Jedn. cena bez DPH</span> 15%</td>
+										<td><span>Cena celkem s DPH</span> 679,21 Kč</td>
+									</tr>
+									<tr>
+										<td><strong>Doprava: </strong> PPL</td>
+										<td><span>Množství</span> 1</td>
+										<td><span>Jedn. cena</span> 82.81</td>
+										<td><span>Celkem</span> 82.81</td>
+										<td><span>Sazba DPH</span> 21%</td>
+										<td><span>Cena celkem s DPH</span> 99,00 Kč</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
-						<div class="ordersItem">
-							<ul class="ordersItem__list">
-								<li class="ordersItem__date">
-									<div class="ordersItem__title">Datum</div>
-									<div class="ordersItem__num">10.2.2024</div>
-									<a href="images/content/product-1.png" download class="ordersItem__link">
-										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M12 14l-.707.707a1 1 0 001.414 0L12 14zm1-9a1 1 0 10-2 0h2zM6.293 9.707l5 5 1.414-1.414-5-5-1.414 1.414zm6.414 5l5-5-1.414-1.414-5 5 1.414 1.414zM13 14V5h-2v9h2z" fill="#195079" />
-											<path d="M5 16v1a2 2 0 002 2h10a2 2 0 002-2v-1" stroke="#195079" stroke-width="2" />
-										</svg> <span> Stáhnout fakturu</span>
-									</a>
-								</li>
-								<li>
-									<div class="ordersItem__title">Čislo objednávky</div>
-									<div class="ordersItem__num">111222024</div>
-								</li>
-								<li class="ordersItem__products">
-									<ul class="ordersItem__products-list">
-										<li>
-											<img src="images/content/product-1.png" loading="lazy" alt="product" />
-										</li>
-										<li>
-											<img src="images/content/product-1.png" loading="lazy" alt="product" />
-										</li>
-										<li>
-											<img src="images/content/product-1.png" loading="lazy" alt="product" />
-										</li>
-										<li>
-											<img src="images/content/product-1.png" loading="lazy" alt="product" />
-										</li>
-									</ul>
-									<a href="#" class="ordersItem__link">
-										<svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M14 10.405l-4 3.69 4 3.69" stroke="#195079" stroke-width="2" />
-											<path d="M4.206 12.02c-.99-.792-1.388-1.712-1.129-2.618.259-.906 1.158-1.747 2.559-2.393 1.401-.646 3.225-1.061 5.19-1.18 1.963-.12 3.958.063 5.674.52 1.716.457 3.057 1.162 3.815 2.006.758.845.891 1.78.378 2.663-.512.883-1.642 1.663-3.214 2.219-1.572.556-3.498.858-5.479.858" stroke="#195079" stroke-width="2" stroke-linecap="round" />
-										</svg> <span>Znovu objednat</span>
-									</a>
-								</li>
-								<li class="ordersItem__price">
-									<div class="ms-xl-auto w-content">
-										<div class="ordersItem__title">Cena</div>
-										<div class="ordersItem__num">3 568 kč</div>
-									</div>
-									<a href="#" class="ordersItem__link">
-										<span> Detaily objednávky</span> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M20 12l.707-.707.707.707-.707.707L20 12zM5 13a1 1 0 110-2v2zm9.707-7.707l6 6-1.414 1.414-6-6 1.414-1.414zm6 7.414l-6 6-1.414-1.414 6-6 1.414 1.414zM20 13H5v-2h15v2z" fill="#195079" />
-										</svg></a>
-								</li>
-							</ul>
+						<div class="orderDiscount">
+							<div class="orderDiscount__code">Slevový kód <span>2t3MKbJv</span></div>
+							<div class="orderDiscount__percent">30,00 %</div>
 						</div>
-						<div class="ordersItem">
-							<ul class="ordersItem__list">
-								<li class="ordersItem__date">
-									<div class="ordersItem__title">Datum</div>
-									<div class="ordersItem__num">10.2.2024</div>
-									<a href="images/content/product-1.png" download class="ordersItem__link">
-										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M12 14l-.707.707a1 1 0 001.414 0L12 14zm1-9a1 1 0 10-2 0h2zM6.293 9.707l5 5 1.414-1.414-5-5-1.414 1.414zm6.414 5l5-5-1.414-1.414-5 5 1.414 1.414zM13 14V5h-2v9h2z" fill="#195079" />
-											<path d="M5 16v1a2 2 0 002 2h10a2 2 0 002-2v-1" stroke="#195079" stroke-width="2" />
-										</svg> <span> Stáhnout fakturu</span>
-									</a>
-								</li>
-								<li>
-									<div class="ordersItem__title">Čislo objednávky</div>
-									<div class="ordersItem__num">111222024</div>
-								</li>
-								<li class="ordersItem__products">
-									<ul class="ordersItem__products-list">
-										<li>
-											<img src="images/content/product-1.png" loading="lazy" alt="product" />
-										</li>
-										<li>
-											<img src="images/content/product-1.png" loading="lazy" alt="product" />
-										</li>
-										<li>
-											<img src="images/content/product-1.png" loading="lazy" alt="product" />
-										</li>
-										<li>
-											<img src="images/content/product-1.png" loading="lazy" alt="product" />
-										</li>
-									</ul>
-									<a href="#" class="ordersItem__link">
-										<svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M14 10.405l-4 3.69 4 3.69" stroke="#195079" stroke-width="2" />
-											<path d="M4.206 12.02c-.99-.792-1.388-1.712-1.129-2.618.259-.906 1.158-1.747 2.559-2.393 1.401-.646 3.225-1.061 5.19-1.18 1.963-.12 3.958.063 5.674.52 1.716.457 3.057 1.162 3.815 2.006.758.845.891 1.78.378 2.663-.512.883-1.642 1.663-3.214 2.219-1.572.556-3.498.858-5.479.858" stroke="#195079" stroke-width="2" stroke-linecap="round" />
-										</svg> <span>Znovu objednat</span>
-									</a>
-								</li>
-								<li class="ordersItem__price">
-									<div class="ms-xl-auto w-content">
-										<div class="ordersItem__title">Cena</div>
-										<div class="ordersItem__num">3 568 kč</div>
-									</div>
-									<a href="#" class="ordersItem__link">
-										<span> Detaily objednávky</span> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M20 12l.707-.707.707.707-.707.707L20 12zM5 13a1 1 0 110-2v2zm9.707-7.707l6 6-1.414 1.414-6-6 1.414-1.414zm6 7.414l-6 6-1.414-1.414 6-6 1.414 1.414zM20 13H5v-2h15v2z" fill="#195079" />
-										</svg></a>
-								</li>
-							</ul>
+						<div class="orderResult">
+							<table>
+								<tr>
+									<td><strong> Mezisoučet bez DPH </strong></td>
+									<td>672,43</td>
+								</tr>
+								<tr>
+									<td><strong>DPH (15,00%)</strong></td>
+									<td>88,59 Kč</td>
+								</tr>
+								<tr>
+									<td><strong>DPH (21,00%)</strong></td>
+									<td>17.18 Kč</td>
+								</tr>
+								<tr>
+									<td><strong>Sleva</strong></td>
+									<td>-203,76 Kč</td>
+								</tr>
+								<tr>
+									<td><strong>Zaokrouhleni</strong></td>
+									<td>-0,44 Kč</td>
+								</tr>
+								<tr>
+									<td><strong>Cena celkem s DPH</strong></td>
+									<td><strong>574,00 Kč</strong></td>
+								</tr>
+							</table>
 						</div>
-						<div class="ordersItem">
-							<ul class="ordersItem__list">
-								<li class="ordersItem__date">
-									<div class="ordersItem__title">Datum</div>
-									<div class="ordersItem__num">10.2.2024</div>
-									<a href="images/content/product-1.png" download class="ordersItem__link">
-										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M12 14l-.707.707a1 1 0 001.414 0L12 14zm1-9a1 1 0 10-2 0h2zM6.293 9.707l5 5 1.414-1.414-5-5-1.414 1.414zm6.414 5l5-5-1.414-1.414-5 5 1.414 1.414zM13 14V5h-2v9h2z" fill="#195079" />
-											<path d="M5 16v1a2 2 0 002 2h10a2 2 0 002-2v-1" stroke="#195079" stroke-width="2" />
-										</svg> <span> Stáhnout fakturu</span>
-									</a>
-								</li>
-								<li>
-									<div class="ordersItem__title">Čislo objednávky</div>
-									<div class="ordersItem__num">111222024</div>
-								</li>
-								<li class="ordersItem__products">
-									<ul class="ordersItem__products-list">
-										<li>
-											<img src="images/content/product-1.png" loading="lazy" alt="product" />
-										</li>
-										<li>
-											<img src="images/content/product-1.png" loading="lazy" alt="product" />
-										</li>
-										<li>
-											<img src="images/content/product-1.png" loading="lazy" alt="product" />
-										</li>
-										<li>
-											<img src="images/content/product-1.png" loading="lazy" alt="product" />
-										</li>
-									</ul>
-									<a href="#" class="ordersItem__link">
-										<svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M14 10.405l-4 3.69 4 3.69" stroke="#195079" stroke-width="2" />
-											<path d="M4.206 12.02c-.99-.792-1.388-1.712-1.129-2.618.259-.906 1.158-1.747 2.559-2.393 1.401-.646 3.225-1.061 5.19-1.18 1.963-.12 3.958.063 5.674.52 1.716.457 3.057 1.162 3.815 2.006.758.845.891 1.78.378 2.663-.512.883-1.642 1.663-3.214 2.219-1.572.556-3.498.858-5.479.858" stroke="#195079" stroke-width="2" stroke-linecap="round" />
-										</svg> <span>Znovu objednat</span>
-									</a>
-								</li>
-								<li class="ordersItem__price">
-									<div class="ms-xl-auto w-content">
-										<div class="ordersItem__title">Cena</div>
-										<div class="ordersItem__num">3 568 kč</div>
-									</div>
-									<a href="#" class="ordersItem__link">
-										<span> Detaily objednávky</span> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M20 12l.707-.707.707.707-.707.707L20 12zM5 13a1 1 0 110-2v2zm9.707-7.707l6 6-1.414 1.414-6-6 1.414-1.414zm6 7.414l-6 6-1.414-1.414 6-6 1.414 1.414zM20 13H5v-2h15v2z" fill="#195079" />
-										</svg></a>
-								</li>
-							</ul>
-						</div>
-						<div class="ordersItem">
-							<ul class="ordersItem__list">
-								<li class="ordersItem__date">
-									<div class="ordersItem__title">Datum</div>
-									<div class="ordersItem__num">10.2.2024</div>
-									<a href="images/content/product-1.png" download class="ordersItem__link">
-										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M12 14l-.707.707a1 1 0 001.414 0L12 14zm1-9a1 1 0 10-2 0h2zM6.293 9.707l5 5 1.414-1.414-5-5-1.414 1.414zm6.414 5l5-5-1.414-1.414-5 5 1.414 1.414zM13 14V5h-2v9h2z" fill="#195079" />
-											<path d="M5 16v1a2 2 0 002 2h10a2 2 0 002-2v-1" stroke="#195079" stroke-width="2" />
-										</svg> <span> Stáhnout fakturu</span>
-									</a>
-								</li>
-								<li>
-									<div class="ordersItem__title">Čislo objednávky</div>
-									<div class="ordersItem__num">111222024</div>
-								</li>
-								<li class="ordersItem__products">
-									<ul class="ordersItem__products-list">
-										<li>
-											<img src="images/content/product-1.png" loading="lazy" alt="product" />
-										</li>
-										<li>
-											<img src="images/content/product-1.png" loading="lazy" alt="product" />
-										</li>
-										<li>
-											<img src="images/content/product-1.png" loading="lazy" alt="product" />
-										</li>
-										<li>
-											<img src="images/content/product-1.png" loading="lazy" alt="product" />
-										</li>
-									</ul>
-									<a href="#" class="ordersItem__link">
-										<svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M14 10.405l-4 3.69 4 3.69" stroke="#195079" stroke-width="2" />
-											<path d="M4.206 12.02c-.99-.792-1.388-1.712-1.129-2.618.259-.906 1.158-1.747 2.559-2.393 1.401-.646 3.225-1.061 5.19-1.18 1.963-.12 3.958.063 5.674.52 1.716.457 3.057 1.162 3.815 2.006.758.845.891 1.78.378 2.663-.512.883-1.642 1.663-3.214 2.219-1.572.556-3.498.858-5.479.858" stroke="#195079" stroke-width="2" stroke-linecap="round" />
-										</svg> <span>Znovu objednat</span>
-									</a>
-								</li>
-								<li class="ordersItem__price">
-									<div class="ms-xl-auto w-content">
-										<div class="ordersItem__title">Cena</div>
-										<div class="ordersItem__num">3 568 kč</div>
-									</div>
-									<a href="#" class="ordersItem__link">
-										<span> Detaily objednávky</span> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M20 12l.707-.707.707.707-.707.707L20 12zM5 13a1 1 0 110-2v2zm9.707-7.707l6 6-1.414 1.414-6-6 1.414-1.414zm6 7.414l-6 6-1.414-1.414 6-6 1.414 1.414zM20 13H5v-2h15v2z" fill="#195079" />
-										</svg></a>
-								</li>
-							</ul>
-						</div>
-						<div class="ordersItem">
-							<ul class="ordersItem__list">
-								<li class="ordersItem__date">
-									<div class="ordersItem__title">Datum</div>
-									<div class="ordersItem__num">10.2.2024</div>
-									<a href="images/content/product-1.png" download class="ordersItem__link">
-										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M12 14l-.707.707a1 1 0 001.414 0L12 14zm1-9a1 1 0 10-2 0h2zM6.293 9.707l5 5 1.414-1.414-5-5-1.414 1.414zm6.414 5l5-5-1.414-1.414-5 5 1.414 1.414zM13 14V5h-2v9h2z" fill="#195079" />
-											<path d="M5 16v1a2 2 0 002 2h10a2 2 0 002-2v-1" stroke="#195079" stroke-width="2" />
-										</svg> <span> Stáhnout fakturu</span>
-									</a>
-								</li>
-								<li>
-									<div class="ordersItem__title">Čislo objednávky</div>
-									<div class="ordersItem__num">111222024</div>
-								</li>
-								<li class="ordersItem__products">
-									<ul class="ordersItem__products-list">
-										<li>
-											<img src="images/content/product-1.png" loading="lazy" alt="product" />
-										</li>
-										<li>
-											<img src="images/content/product-1.png" loading="lazy" alt="product" />
-										</li>
-										<li>
-											<img src="images/content/product-1.png" loading="lazy" alt="product" />
-										</li>
-										<li>
-											<img src="images/content/product-1.png" loading="lazy" alt="product" />
-										</li>
-									</ul>
-									<a href="#" class="ordersItem__link">
-										<svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M14 10.405l-4 3.69 4 3.69" stroke="#195079" stroke-width="2" />
-											<path d="M4.206 12.02c-.99-.792-1.388-1.712-1.129-2.618.259-.906 1.158-1.747 2.559-2.393 1.401-.646 3.225-1.061 5.19-1.18 1.963-.12 3.958.063 5.674.52 1.716.457 3.057 1.162 3.815 2.006.758.845.891 1.78.378 2.663-.512.883-1.642 1.663-3.214 2.219-1.572.556-3.498.858-5.479.858" stroke="#195079" stroke-width="2" stroke-linecap="round" />
-										</svg> <span>Znovu objednat</span>
-									</a>
-								</li>
-								<li class="ordersItem__price">
-									<div class="ms-xl-auto w-content">
-										<div class="ordersItem__title">Cena</div>
-										<div class="ordersItem__num">3 568 kč</div>
-									</div>
-									<a href="#" class="ordersItem__link">
-										<span> Detaily objednávky</span> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M20 12l.707-.707.707.707-.707.707L20 12zM5 13a1 1 0 110-2v2zm9.707-7.707l6 6-1.414 1.414-6-6 1.414-1.414zm6 7.414l-6 6-1.414-1.414 6-6 1.414 1.414zM20 13H5v-2h15v2z" fill="#195079" />
-										</svg></a>
-								</li>
-							</ul>
-						</div>
+						<a href="#" class="btn popularProducts__btn">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15 18l-6-6 6-6" stroke="#fff" stroke-width="2" />
+							</svg> Zpět
+						</a>
 					</div>
 				</div>
 			</section>
@@ -804,7 +588,6 @@
 				</div>
 			</div>
 		</div>
-
 		<footer class="footer">
 			<div class="container">
 				<div class="footer-head">

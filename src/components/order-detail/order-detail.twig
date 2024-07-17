@@ -1,0 +1,134 @@
+<section class="order-detail">
+  <div class="container">
+    <h1 class="title text-center mb-3">Moje objednávky</h1>
+    <div class="order-detail__number">
+      Čislo objednávky <strong>111222024</strong>
+    </div>
+    <div class="order-detail__wrapper">
+      <ul class="order-detail__links">
+        <li>
+          <a
+            class="order-detail__links-download"
+            href="images/content/product-1.png"
+            download=""
+          >
+            {% include "@images/download.svg" %}
+            <span> Stáhnout fakturu</span>
+          </a>
+        </li>
+        <li>
+          <a class="order-detail__links-orders" href="#">
+            {% include "@images/circle.svg" %}
+            <span>Znovu objednat</span>
+          </a>
+        </li>
+      </ul>
+      <div class="orderInfo">
+        <h2 class="orderInfo__title">Ing. Petr Novák</h2>
+        <div class="orderInfo__inner">
+          <ul class="orderInfo__list">
+            <li>
+              <h3>Fakturační adresa:</h3>
+            </li>
+            <li>Na Viničkách 508,</li>
+            <li>267 06 Hýskov</li>
+          </ul>
+          <ul class="orderInfo__list">
+            <li>
+              <h3>Kontaktní údaje:</h3>
+            </li>
+            <li>tel.: <a href="tel:+420111222333">+420 111222333</a></li>
+            <li><a href="mailto:e-mail@seznam.cz ">e-mail@seznam.cz </a></li>
+          </ul>
+
+          <ul class="orderInfo__list">
+            <li>
+              <h3>Firma:</h3>
+            </li>
+            <li>Sogno Reale</li>
+            <li>IČO: 07298871</li>
+          </ul>
+          <ul class="orderInfo__list">
+            <li>
+              <h3>Objednávka:</h3>
+            </li>
+            <li>Doprava PPL</li>
+            <li>Platba kartou</li>
+            <li>Stav: Nová</li>
+          </ul>
+        </div>
+      </div>
+      <div class="orderTable">
+        <table>
+          <thead>
+            <tr>
+              <th>Produkt</th>
+              <th>Množství</th>
+              <th>Jedn. cena</th>
+              <th>Celkem</th>
+              <th>DPH</th>
+              <th>Cena celkem s DPH</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>
+                <span>Produkt:</span> <strong>SPECIFIC CPD-M</strong> Puppy
+                Medium Breed 4 kg
+              </td>
+              <td><span>Množství</span> 1</td>
+              <td><span>Jedn. cena bez DPH</span> 590,61</td>
+              <td><span>Sazba DPH</span> 590,61</td>
+              <td><span>Jedn. cena bez DPH</span> 15%</td>
+              <td><span>Cena celkem s DPH</span> 679,21 Kč</td>
+            </tr>
+            <tr>
+              <td><strong>Doprava: </strong> PPL</td>
+              <td><span>Množství</span> 1</td>
+              <td><span>Jedn. cena</span> 82.81</td>
+              <td><span>Celkem</span> 82.81</td>
+              <td><span>Sazba DPH</span> 21%</td>
+              <td><span>Cena celkem s DPH</span> 99,00 Kč</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="orderDiscount">
+        <div class="orderDiscount__code">Slevový kód <span>2t3MKbJv</span></div>
+        <div class="orderDiscount__percent">30,00 %</div>
+      </div>
+      <div class="orderResult">
+        <table>
+          <tr>
+            <td><strong> Mezisoučet bez DPH </strong></td>
+            <td>672,43</td>
+          </tr>
+          <tr>
+            <td><strong>DPH (15,00%)</strong></td>
+            <td>88,59 Kč</td>
+          </tr>
+          <tr>
+            <td><strong>DPH (21,00%)</strong></td>
+            <td>17.18 Kč</td>
+          </tr>
+          <tr>
+            <td><strong>Sleva</strong></td>
+            <td>-203,76 Kč</td>
+          </tr>
+          <tr>
+            <td><strong>Zaokrouhleni</strong></td>
+            <td>-0,44 Kč</td>
+          </tr>
+          <tr>
+            <td><strong>Cena celkem s DPH</strong></td>
+            <td><strong>574,00 Kč</strong></td>
+          </tr>
+        </table>
+      </div>
+      <a href="#" class="btn popularProducts__btn">
+        {% include "@images/chevron-left.svg" %} Zpět
+      </a>
+    </div>
+  </div>
+</section>

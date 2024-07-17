@@ -92,7 +92,6 @@
     min-height: auto;
   }
   &:hover {
-    min-height: 362px;
     border: 2px solid var(--medium-gray);
     box-shadow: 0px 4px 24px 0px rgba(36, 36, 36, 0.25);
     @include media-breakpoint-down(lg) {

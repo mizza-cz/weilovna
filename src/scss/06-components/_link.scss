@@ -1,0 +1,18 @@
+.link {
+  color: var(--blue);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25.9px;
+  width: fit-content;
+  transition: all 0.3s;
+
+  &:hover {
+    color: var(--dark-pink);
+    svg path {
+      stroke: var(--dark-pink);
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.userCard-favorites {
+  &__list {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 0 160px;
+
+    .ordersItem__link {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 24px;
+    }
+  }
+  &__box {
+    border: 1px solid var(--light-gray);
+    padding: 18px 60px;
+    border-radius: 8px;
+    margin-bottom: 46px;
+    display: block;
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
+  &__title {
+    position: relative;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: center;
+    color: var(--blue);
+    padding: 0 46px;
+    width: fit-content;
+    margin: 0 auto 20px;
+    &::before {
+      left: 0;
+    }
+    &::after {
+      right: 0;
+    }
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 32px;
+      height: 30px;
+      top: 0;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url("../images/ico/favorite-pink.svg");
+    }
+  }
+}

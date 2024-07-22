@@ -1,0 +1,319 @@
+{% extends "@components/base/base.twig" %} {% set title = "10.0_account" %} {%
+block main %}
+
+<header class="header">
+  <div class="header__promotion">
+    <div class="container">
+      <span> Při objednávce nad 1000 Kč s DPH je doprava ZDARMA.</span>
+    </div>
+  </div>
+  <div class="container">
+    <div class="header-info">
+      <a href="#" class="header-info__ban header-info__item">
+        <img
+          src="images/content/header-ban.png"
+          loading="lazy"
+          alt="Veterinární klinika Na Weilovně"
+        />
+      </a>
+      <a
+        href="https://www.google.com/maps/place/N%C3%A1dra%C5%BEn%C3%AD+131%2F131,+261+01+P%C5%99%C3%ADbram+IV/@49.6867172,14.0019069,17z/data=!3m1!4b1!4m6!3m5!1s0x470b0e6da2bacca9:0xd87b5bbd136f04f9!8m2!3d49.6867172!4d14.0044818!16s%2Fg%2F11cppkb_tm!5m1!1e1?entry=ttu"
+        target="_blank"
+        class="header-info__address header-info__item"
+      >
+        {% include "@images/location.svg" %} Nádražní 131, <br />
+        <span>261 01</span> Příbram IV
+      </a>
+      <div class="header-info__phone header-info__item">
+        <a href="tel:+420724277230">
+          {% include "@images/phone.svg" %} +420 724 277 230</a
+        >
+        <p>
+          Po - Pá: 8 - 12, 15 - 18 <br />
+          So: 9 - 11
+        </p>
+      </div>
+      <div class="header-info__email header-info__item">
+        <a href="https://www.weilovna.cz/" target="_blank">www.weilovna.cz</a>
+        <a href="mailto:klinika@weilovna.cz "
+          >{% include "@images/mail.svg" %} klinika@weilovna.cz
+        </a>
+      </div>
+    </div>
+    <div class="headerMob-info">
+      <button class="header__opener js-header__opener" type="button">
+        {% include "@images/menu.svg" %}
+        <span>menu</span>
+      </button>
+      <div class="header-info__phone header-info__item">
+        <a href="tel:+420724277230">
+          {% include "@images/phone.svg" %} +420 724 277 230</a
+        >
+        <p>
+          Po - Pá: 8 - 12, 15 - 18 <br />
+          So: 9 - 11
+        </p>
+      </div>
+      <div class="headerMob-info__box">
+        <a href="#" class="headerMob-info__box-user">
+          <img src="images/ico/ava-mob.svg" alt="ava" loading="lazy" />
+        </a>
+        <a href="#" class="headerMob-info__box-basket">
+          <img src="images/ico/bag-mob.svg" alt="ava" loading="lazy" />
+          <span>0</span>
+        </a>
+      </div>
+    </div>
+    <div class="header-search d-xl-flex d-none">
+      <a href="#" target="_blank" class="header-search__ban">
+        <img
+          src="images/content/search-ban.png"
+          loading="lazy"
+          alt="specific"
+        />
+      </a>
+      <h1 class="header-search__title">VŠE, CO HLEDÁTE PRO SVÉHO MAZLÍČKA</h1>
+      <form class="header-search__form">
+        <input type="text" />
+        <button>{% include "@images/search.svg" %}</button>
+      </form>
+    </div>
+    <div class="header-board">
+      <div class="header-slider">
+        <a href="#" class="header-slider__item" target="_blank">
+          <img src="images/content/header-slider-test.jpeg" alt="slider-img" />
+        </a>
+        <a href="#" class="header-slider__item" target="_blank">
+          <img src="images/content/header-slider-test.jpeg" alt="slider-img" />
+        </a>
+        <a href="#" class="header-slider__item" target="_blank">
+          <img src="images/content/header-slider-test.jpeg" alt="slider-img" />
+        </a>
+        <a href="#" class="header-slider__item" target="_blank">
+          <img src="images/content/header-slider-test.jpeg" alt="slider-img" />
+        </a>
+      </div>
+      <div class="header-board__account">
+        {% include "@components/basket/basket.twig" %} {% include
+        "@components/account/accountLogin.twig" %}
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="main" aria-label="Hlavní obsah">
+  {% include "@components/navigation/navigation.twig" %} {% include
+  "@components/userCard/userCard.twig" %}
+
+  <section class="orders-section d-none d-sm-block">
+    <div class="container">
+      <h1 class="title text-center mb-3">Moje objednávky</h1>
+      <div class="orders-section__inner">
+        <div class="ordersItem">
+          <ul class="ordersItem__list">
+            <li class="ordersItem__date">
+              <div class="ordersItem__title">Datum</div>
+              <div class="ordersItem__num">10.2.2024</div>
+              <a
+                href="images/content/product-1.png"
+                download
+                class="ordersItem__link"
+              >
+                {% include "@images/download.svg" %}
+                <span> Stáhnout fakturu</span>
+              </a>
+            </li>
+            <li>
+              <div class="ordersItem__title">Čislo objednávky</div>
+              <div class="ordersItem__num">111222024</div>
+            </li>
+            <li class="ordersItem__products">
+              <ul class="ordersItem__products-list">
+                <li>
+                  <img
+                    src="images/content/product-1.png"
+                    loading="lazy"
+                    alt="product"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="images/content/product-1.png"
+                    loading="lazy"
+                    alt="product"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="images/content/product-1.png"
+                    loading="lazy"
+                    alt="product"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="images/content/product-1.png"
+                    loading="lazy"
+                    alt="product"
+                  />
+                </li>
+              </ul>
+              <a href="#" class="ordersItem__link">
+                {% include "@images/circle.svg" %}
+                <span>Znovu objednat</span>
+              </a>
+            </li>
+            <li class="ordersItem__price">
+              <div class="ms-xl-auto w-content">
+                <div class="ordersItem__title">Cena</div>
+                <div class="ordersItem__num">3 568 kč</div>
+              </div>
+              <a href="#" class="ordersItem__link">
+                <span> Detaily objednávky</span> {% include
+                "@images/arrow-right.svg" %}</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="ordersItem">
+          <ul class="ordersItem__list">
+            <li class="ordersItem__date">
+              <div class="ordersItem__title">Datum</div>
+              <div class="ordersItem__num">10.2.2024</div>
+              <a
+                href="images/content/product-1.png"
+                download
+                class="ordersItem__link"
+              >
+                {% include "@images/download.svg" %}
+                <span> Stáhnout fakturu</span>
+              </a>
+            </li>
+            <li>
+              <div class="ordersItem__title">Čislo objednávky</div>
+              <div class="ordersItem__num">111222024</div>
+            </li>
+            <li class="ordersItem__products">
+              <ul class="ordersItem__products-list">
+                <li>
+                  <img
+                    src="images/content/product-1.png"
+                    loading="lazy"
+                    alt="product"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="images/content/product-1.png"
+                    loading="lazy"
+                    alt="product"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="images/content/product-1.png"
+                    loading="lazy"
+                    alt="product"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="images/content/product-1.png"
+                    loading="lazy"
+                    alt="product"
+                  />
+                </li>
+              </ul>
+              <a href="#" class="ordersItem__link">
+                {% include "@images/circle.svg" %}
+                <span>Znovu objednat</span>
+              </a>
+            </li>
+            <li class="ordersItem__price">
+              <div class="ms-xl-auto w-content">
+                <div class="ordersItem__title">Cena</div>
+                <div class="ordersItem__num">3 568 kč</div>
+              </div>
+              <a href="#" class="ordersItem__link">
+                <span> Detaily objednávky</span> {% include
+                "@images/arrow-right.svg" %}</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="ordersItem">
+          <ul class="ordersItem__list">
+            <li class="ordersItem__date">
+              <div class="ordersItem__title">Datum</div>
+              <div class="ordersItem__num">10.2.2024</div>
+              <a
+                href="images/content/product-1.png"
+                download
+                class="ordersItem__link"
+              >
+                {% include "@images/download.svg" %}
+                <span> Stáhnout fakturu</span>
+              </a>
+            </li>
+            <li>
+              <div class="ordersItem__title">Čislo objednávky</div>
+              <div class="ordersItem__num">111222024</div>
+            </li>
+            <li class="ordersItem__products">
+              <ul class="ordersItem__products-list">
+                <li>
+                  <img
+                    src="images/content/product-1.png"
+                    loading="lazy"
+                    alt="product"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="images/content/product-1.png"
+                    loading="lazy"
+                    alt="product"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="images/content/product-1.png"
+                    loading="lazy"
+                    alt="product"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="images/content/product-1.png"
+                    loading="lazy"
+                    alt="product"
+                  />
+                </li>
+              </ul>
+              <a href="#" class="ordersItem__link">
+                {% include "@images/circle.svg" %}
+                <span>Znovu objednat</span>
+              </a>
+            </li>
+            <li class="ordersItem__price">
+              <div class="ms-xl-auto w-content">
+                <div class="ordersItem__title">Cena</div>
+                <div class="ordersItem__num">3 568 kč</div>
+              </div>
+              <a href="#" class="ordersItem__link">
+                <span> Detaily objednávky</span> {% include
+                "@images/arrow-right.svg" %}</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <a href="#" class="link mt-3 ms-auto"
+        >Prohlédnout všechny objednávky {% include "@images/chevron-right.svg"
+        %}</a
+      >
+    </div>
+  </section>
+  {% include "@components/userCard-favorites/userCard-favorites.twig" %}
+</main>
+{% include "@components/modal/modalLogin.twig" %} {% endblock %}

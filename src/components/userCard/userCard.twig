@@ -1,0 +1,98 @@
+<section class="userCard">
+  <div class="container">
+    <div class="userCard__inner">
+      <div class="userCard__content">
+        <div class="userCard__box">
+          <div class="userCard__box-content">
+            <div class="userCard__left">
+              <div class="userCard__item">
+                <div class="userCard__img">
+                  <img
+                    src="images/ico/camera.svg"
+                    alt="user"
+                    id="profile-pic"
+                  />
+                  <input
+                    type="file"
+                    accept="image/jpg, image/png, image/jpeg"
+                    id="input-file"
+                  />
+                </div>
+                <h1 class="h2">Ing. Petr Novák</h1>
+              </div>
+            </div>
+            <div class="userCard__info">
+              <a href="#" class="userCard__edit">
+                Změnit údaje <img src="images/ico/edit.svg" alt="user" />
+              </a>
+              <ul class="userCard__list">
+                <li>
+                  <strong>Ulice 123/4 </strong>
+                </li>
+                <li>
+                  <strong> 26801 Hořovice</strong>
+                </li>
+                <li><strong>ČR</strong></li>
+              </ul>
+
+              <ul class="userCard__list">
+                <li>
+                  tel.:
+                  <a href="tel:+420111222333">
+                    <strong> +420 111222333</strong>
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:e-mail@seznam.cz">
+                    <strong>e-mail@seznam.cz</strong>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" id="companyCheckbox" />
+            <label for="companyCheckbox">
+              <span> Nakupuji na firmu</span>
+            </label>
+          </div>
+          <div class="company-fields">
+            <ul class="userCard__company">
+              <li>Sogno Reale</li>
+              <li>IČO: 07298871</li>
+              <li>Na Viničkách 508, 267 06 Hýskov</li>
+            </ul>
+          </div>
+        </div>
+        <a href="#" class="btn userCard__btn">Změnit údaje</a>
+        <div class="userCard__menu">
+          <div class="userCard__menu-discount">
+            <img src="images/content/sleva.png" alt="discount" />
+            Zákaznická <br />
+            sleva <strong>5%</strong>
+          </div>
+          <ul class="userCard__menu-list">
+            <li>
+              <a href="#">Moje objednávky</a>
+            </li>
+            <li>
+              <a href="#">
+                {% include "@images/favorite-pink.svg" %} Oblíbené produkty</a
+              >
+            </li>
+            <li>
+              <a class="userCard__menu-order" href="#">
+                {% include "@images/circle.svg" %} Znovu objednat</a
+              >
+            </li>
+            <li>
+              <a class="userCard__menu-complaint" href="#">
+                {% include "@images/reklamace.svg" %} Reklamační řád</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

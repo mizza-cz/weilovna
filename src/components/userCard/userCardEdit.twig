@@ -1,0 +1,169 @@
+<section class="userCard">
+  <div class="container">
+    <div class="userCard__inner">
+      <div class="userCard__content">
+        <div class="userCard__box">
+          <div class="userCard__box-content">
+            <div class="userCard__left">
+              <div class="userCard__item">
+                <div class="userCard__img">
+                  <img
+                    src="images/ico/camera.svg"
+                    alt="user"
+                    id="profile-pic"
+                  />
+                  <input
+                    type="file"
+                    accept="image/jpg, image/png, image/jpeg"
+                    id="input-file"
+                  />
+                </div>
+                <h1 class="h2">Ing. Petr Novák</h1>
+              </div>
+            </div>
+            <div class="userCard__info">
+              <a href="#" class="userCard__edit">
+                Změnit údaje <img src="images/ico/edit.svg" alt="user" />
+              </a>
+              <ul class="userCard__list">
+                <li>
+                  <strong>Ulice 123/4 </strong>
+                </li>
+                <li>
+                  <strong> 26801 Hořovice</strong>
+                </li>
+                <li><strong>ČR</strong></li>
+              </ul>
+
+              <ul class="userCard__list">
+                <li>
+                  tel.:
+                  <a href="tel:+420111222333">
+                    <strong> +420 111222333</strong>
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:e-mail@seznam.cz">
+                    <strong>e-mail@seznam.cz</strong>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="form-check">
+            <input checked type="checkbox" id="companyCheckbox" />
+            <label for="companyCheckbox">
+              <span> Nakupuji na firmu</span>
+            </label>
+          </div>
+          <div class="company-fields" style="display: block">
+            <form class="userCardEdit">
+              <div class="row gx-5 gy-3">
+                <div class="col-12">
+                  <div class="form__box">
+                    <label for="nameComp" class="form-label">
+                      Název společnosti
+                    </label>
+                    <input
+                      id="nameComp"
+                      name="nameComp"
+                      type="text"
+                      placeholder="Název společnosti"
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form__box">
+                    <label for="ico" class="form-label"> IČO </label>
+                    <input name="ico" id="ico" type="text" placeholder="IČO" />
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form__box">
+                    <label for="dic" class="form-label"> DIČ </label>
+                    <input id="dic" name="dic" type="text" placeholder="DIČ" />
+                  </div>
+                </div>
+
+                <div class="col-sm-8">
+                  <div class="form__box">
+                    <label for="streetComp" class="form-label"> Ulice </label>
+                    <input
+                      name="streetComp"
+                      id="streetComp"
+                      type="text"
+                      placeholder="Ulice"
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form__box">
+                    <label for="refNumComp" class="form-label">
+                      Číslo popisné
+                    </label>
+                    <input
+                      name="refNumComp"
+                      id="refNumComp"
+                      type="text"
+                      placeholder="Číslo popisné"
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-8">
+                  <div class="form__box">
+                    <label for="cityComp" class="form-label"> Město </label>
+                    <input
+                      name="cityComp"
+                      id="cityComp"
+                      type="text"
+                      placeholder="Město"
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form__box">
+                    <label for="pscComp" class="form-label"> PSČ </label>
+                    <input
+                      name="pscComp"
+                      id="pscComp"
+                      type="text"
+                      placeholder="PSČ"
+                    />
+                  </div>
+                </div>
+              </div>
+              <button class="btn mt-3">Uložit</button>
+            </form>
+          </div>
+        </div>
+        <div class="userCard__menu">
+          <div class="userCard__menu-discount">
+            <img src="images/content/sleva.png" alt="discount" />
+            Zákaznická <br />
+            sleva <strong>5%</strong>
+          </div>
+          <ul class="userCard__menu-list">
+            <li>
+              <a href="#">Moje objednávky</a>
+            </li>
+            <li>
+              <a href="#">
+                {% include "@images/favorite-pink.svg" %} Oblíbené produkty</a
+              >
+            </li>
+            <li>
+              <a class="userCard__menu-order" href="#">
+                {% include "@images/circle.svg" %} Znovu objednat</a
+              >
+            </li>
+            <li>
+              <a class="userCard__menu-complaint" href="#">
+                {% include "@images/reklamace.svg" %} Reklamační řád</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

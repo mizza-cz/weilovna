@@ -20,7 +20,7 @@ if (archInner) {
   }
 
   archBtn.addEventListener("click", function () {
-    archCount += 4;
+    archCount += 12;
     showProd();
   });
 

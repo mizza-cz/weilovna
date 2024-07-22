@@ -1,0 +1,75 @@
+.pageNotFound {
+  margin-bottom: 70px;
+  &__inner {
+    @include media-breakpoint-down(xl) {
+      border: 3px solid var(--blue);
+      border-radius: 8px;
+      padding-bottom: 32px;
+      margin-top: 12px;
+    }
+    a {
+      color: var(--blue);
+      text-align: center;
+      font-size: 32px;
+      line-height: 24px;
+      display: block;
+      @include media-breakpoint-down(xl) {
+        font-size: 20px;
+        line-height: 25px;
+        font-weight: 700;
+      }
+    }
+  }
+  &__title {
+    color: var(--blue);
+    font-size: 300px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 73%;
+    padding-top: 20px;
+    border-left: 4px solid var(--blue);
+    border-right: 4px solid var(--blue);
+    @include media-breakpoint-down(xl) {
+      border: none;
+      padding-top: 60px;
+      font-size: 100px;
+    }
+  }
+  &__bottom {
+    color: var(--color-light);
+    text-align: center;
+    position: relative;
+    font-size: 60px;
+    line-height: 77.7px;
+    background-color: var(--blue);
+    padding: 16px 88px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin-bottom: 28px;
+    @include media-breakpoint-down(xl) {
+      font-size: 20px;
+      line-height: normal;
+      height: 96px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 8px;
+      bottom: 2px;
+      background-image: url("../images/ico/notfound.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 78px;
+      height: 92px;
+      @include media-breakpoint-down(xl) {
+        width: 56px;
+        height: 66px;
+        bottom: 8px;
+      }
+    }
+  }
+}

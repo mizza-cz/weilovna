@@ -1,0 +1,218 @@
+.product-section {
+  padding-left: 32px;
+  padding-top: 66px;
+  @include media-breakpoint-down(md) {
+    padding-top: 20px;
+  }
+  @include media-breakpoint-down(xl) {
+    padding-left: 0;
+  }
+  &__download {
+    display: none;
+    @include media-breakpoint-down(md) {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--blue);
+      font-size: 17.5px;
+      font-weight: 700;
+      line-height: 19.5px;
+      margin-bottom: 36px;
+    }
+  }
+  &__container {
+    font-size: 20px;
+    line-height: 30px;
+    p {
+      @include media-breakpoint-down(md) {
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+  }
+  &__file {
+    margin-bottom: 72px;
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+  &__img {
+    max-width: 272px;
+    aspect-ratio: 272/249;
+    width: 100%;
+    height: auto;
+    float: left;
+    @include media-breakpoint-down(lg) {
+      float: none;
+      aspect-ratio: 80/80;
+
+      width: auto;
+      max-width: 30%;
+      flex: 0 0 30%;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__text {
+    @include media-breakpoint-down(lg) {
+      clear: both;
+      margin-top: 20px;
+      width: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+  &__box {
+    margin-bottom: 40px;
+    @include media-breakpoint-down(lg) {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .h2 span {
+      @include media-breakpoint-down(lg) {
+        display: block;
+        font-weight: 400;
+      }
+    }
+    .h2 {
+      @include media-breakpoint-down(lg) {
+        max-width: 70%;
+        flex: 0 0 70%;
+        padding-left: 18px;
+      }
+      @include media-breakpoint-down(md) {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 25.9px;
+      }
+    }
+  }
+}
+
+.productForm {
+  margin-bottom: 52px;
+  max-width: 800px;
+  &__radios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 26px;
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    label {
+      max-width: 320px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+    label p {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+  }
+  input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    aspect-ratio: 1;
+    border: calc(1em / 8) solid #020024;
+    padding: calc(1em / 8);
+    background: radial-gradient(farthest-side, #b10061 94%, #0000) 50%/0 0
+      no-repeat content-box;
+    border-radius: 50%;
+    outline-offset: calc(1em / 10);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    font-size: inherit;
+    transition: 0.3s;
+  }
+
+  input[type="radio"]:checked {
+    border-color: #b10061;
+    background-size: 100% 100%;
+  }
+
+  input[type="radio"]:disabled {
+    background: linear-gradient(#939393 0 0) 50%/100% 20% no-repeat content-box;
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  @media print {
+    input[type="radio"] {
+      -webkit-appearance: auto;
+      -moz-appearance: auto;
+      appearance: auto;
+      background: none;
+    }
+  }
+}
+
+.productForm__links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 48px;
+  @include media-breakpoint-down(md) {
+    justify-content: center;
+  }
+  .link {
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+  .link path {
+    stroke: var(--blue);
+  }
+  .btn {
+    max-width: 340px;
+  }
+}
+.productForm__input {
+  margin-bottom: 54px;
+  display: flex;
+  align-items: center;
+  padding: 13px 24px;
+  border-radius: 8px;
+  border: 1px solid var(--light-gray);
+  gap: 8px;
+  width: fit-content;
+  @include media-breakpoint-down(md) {
+    justify-content: center;
+    margin: 0 auto 48px;
+  }
+  .counter__btn {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+  .counter__value {
+    height: auto;
+    max-width: 52px;
+    text-align: center;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    font-size: 17.5px;
+    font-weight: 400;
+    line-height: 20px;
+    &:hover {
+      border: none;
+      box-shadow: none;
+    }
+  }
+}

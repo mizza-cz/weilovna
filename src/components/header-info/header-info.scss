@@ -1,0 +1,343 @@
+.header-info {
+  box-shadow: 0px 0px 4px 0px #12425526;
+  display: flex;
+  background-color: var(--dark-blue-100);
+  border-radius: 0 0 16px 16px;
+  overflow: hidden;
+  align-items: center;
+  margin-bottom: 16px;
+
+  @include media-breakpoint-down(xl) {
+    justify-content: space-between;
+  }
+  @include media-breakpoint-down(md) {
+    margin-bottom: 8px;
+  }
+  @media (max-width: 1100px) {
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    gap: 16px;
+  }
+  @include media-breakpoint-down(md) {
+    align-items: flex-start;
+    gap: 12px !important;
+  }
+  &__ban {
+    height: 120px;
+    width: 280px;
+    max-width: 19rem;
+    min-width: 19rem;
+    @include media-breakpoint-down(xl) {
+      // min-width: auto;
+    }
+    @media only screen and (max-width: 1100px) and (min-width: 480px) {
+      max-width: 14rem;
+      width: 100%;
+      min-width: 84px;
+      height: auto;
+    }
+    @include media-breakpoint-only(sm) {
+      max-width: 8rem;
+      min-width: 84px;
+      height: auto;
+    }
+    @include media-breakpoint-down(sm) {
+      max-width: 5rem;
+      min-width: 84px;
+      height: auto;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__phone {
+    padding-left: 32px;
+    padding-right: 24px;
+    position: relative;
+    @media (max-width: 1100px) {
+      display: none;
+    }
+    @include media-breakpoint-down(md) {
+    }
+    p {
+      display: block;
+      padding-left: 30px;
+      @include media-breakpoint-down(md) {
+        padding-left: 22px;
+        font-style: italic;
+        color: var(--blue);
+      }
+    }
+    a {
+      display: flex;
+      align-items: center;
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 32.38px;
+      color: var(--blue);
+      position: relative;
+      padding-left: 30px;
+      text-decoration: none;
+      transition: all 0.3s;
+      margin-bottom: 2px;
+      @include media-breakpoint-down(md) {
+        padding-left: 22px;
+        text-decoration: underline;
+        text-decoration-color: inherit;
+      }
+      &:hover {
+        color: var(--dark-pink);
+        svg path {
+          fill: var(--dark-pink);
+        }
+      }
+      svg {
+        position: absolute;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        @include media-breakpoint-down(md) {
+          width: 16px;
+          height: 16px;
+        }
+      }
+      svg path {
+        transition: all 0.3s;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      height: 88px;
+      background-color: var(--blue);
+      width: 1px;
+      top: -4px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      height: 88px;
+      background-color: var(--blue);
+      width: 1px;
+      top: -4px;
+    }
+  }
+  &__item + &__item {
+    width: 100%;
+
+    @include media-breakpoint-down(xl) {
+      width: auto;
+    }
+    @include media-breakpoint-only(lg) {
+      padding: 0 24px;
+    }
+    @include media-breakpoint-down(lg) {
+      padding: 0;
+      width: 100%;
+    }
+  }
+  &__email {
+    position: relative;
+    padding: 0 32px;
+    max-width: 270px;
+
+    @include media-breakpoint-only(lg) {
+      padding: 0 24px;
+    }
+    @include media-breakpoint-down(md) {
+      padding-top: 8px !important;
+    }
+    a {
+      color: var(--blue);
+      text-decoration-color: transparent;
+      padding-left: 26px;
+      position: relative;
+      @include media-breakpoint-down(md) {
+        padding-left: 22px;
+      }
+      &:hover {
+        color: var(--dark-pink);
+        svg path {
+          fill: var(--dark-pink);
+        }
+      }
+      svg {
+        left: 0;
+        width: 18px;
+        height: 14px;
+        position: absolute;
+        object-fit: contain;
+        transition: all 0.3s;
+        @include media-breakpoint-down(md) {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+    a:first-child {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 32px;
+      display: block;
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+    }
+
+    a:last-child {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 32px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      text-decoration-color: inherit;
+      @include media-breakpoint-down(md) {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18.13px;
+      }
+    }
+  }
+  &__address {
+    font-size: 18.5px;
+    line-height: 23.96px;
+    color: var(--blue);
+    display: flex;
+    gap: 6px;
+    padding: 0 32px;
+    position: relative;
+    text-decoration-color: transparent;
+    transition: all 0.3s;
+    max-width: 290px;
+    transition: all 0.3s;
+    // flex-wrap: wrap;
+    @include media-breakpoint-down(md) {
+      padding-top: 8px !important;
+    }
+    span {
+      display: contents;
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+    @media (max-width: 1100px) {
+      order: 1;
+      padding-right: 0 !important;
+      max-width: 260px;
+      padding-left: 0 !important;
+    }
+    @include media-breakpoint-only(lg) {
+      padding: 0 24px;
+    }
+    @include media-breakpoint-down(md) {
+      font-size: 14px;
+      line-height: 16px;
+      flex-wrap: nowrap;
+    }
+    &:hover {
+      color: var(--dark-pink);
+      font-weight: 700;
+      svg path:last-child {
+        stroke: var(--dark-pink);
+      }
+      svg path:first-child {
+        fill: var(--dark-pink);
+      }
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      display: block;
+      min-width: 24px;
+      @include media-breakpoint-down(md) {
+        width: 16px;
+        height: 16px;
+        min-width: 16px;
+      }
+    }
+    svg path {
+      transition: all 0.3s;
+    }
+  }
+}
+.headerMob-info {
+  display: none;
+  margin-bottom: 12px;
+  @media (max-width: 1100px) {
+    display: flex;
+    justify-content: space-between;
+  }
+  .header-info__phone {
+    @include media-breakpoint-down(md) {
+      padding: 0;
+
+      a {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 22.02px;
+      }
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18.13px;
+      }
+    }
+    display: block;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+  &__box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  &__box-user {
+    background-color: var(--blue);
+    border-radius: 100%;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      margin-right: -3px;
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+  }
+  &__box-basket {
+    position: relative;
+    height: 34px;
+    width: 38px;
+    display: block;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    span {
+      text-align: center;
+      color: var(--color-light);
+      position: absolute;
+      transition: all 0.3s;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 24px;
+    }
+  }
+}

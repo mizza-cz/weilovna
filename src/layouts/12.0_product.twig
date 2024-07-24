@@ -1,0 +1,186 @@
+{% extends "@components/base/base.twig" %} {% set title = "12.0_product" %} {%
+block main %}
+<header class="header">
+  <div class="header__promotion">
+    <div class="container">
+      <span> Při objednávce nad 1000 Kč s DPH je doprava ZDARMA.</span>
+    </div>
+  </div>
+  <div class="container">
+    <div class="header-info">
+      <a href="#" class="header-info__ban header-info__item">
+        <img
+          src="images/content/header-ban.png"
+          loading="lazy"
+          alt="Veterinární klinika Na Weilovně"
+        />
+      </a>
+      <a
+        href="https://www.google.com/maps/place/N%C3%A1dra%C5%BEn%C3%AD+131%2F131,+261+01+P%C5%99%C3%ADbram+IV/@49.6867172,14.0019069,17z/data=!3m1!4b1!4m6!3m5!1s0x470b0e6da2bacca9:0xd87b5bbd136f04f9!8m2!3d49.6867172!4d14.0044818!16s%2Fg%2F11cppkb_tm!5m1!1e1?entry=ttu"
+        target="_blank"
+        class="header-info__address header-info__item"
+      >
+        {% include "@images/location.svg" %} Nádražní 131, <br />
+        <span>261 01</span> Příbram IV
+      </a>
+      <div class="header-info__phone header-info__item">
+        <a href="tel:+420724277230">
+          {% include "@images/phone.svg" %} +420 724 277 230</a
+        >
+        <p>
+          Po - Pá: 8 - 12, 15 - 18 <br />
+          So: 9 - 11
+        </p>
+      </div>
+      <div class="header-info__email header-info__item">
+        <a href="https://www.weilovna.cz/" target="_blank">www.weilovna.cz</a>
+        <a href="mailto:klinika@weilovna.cz "
+          >{% include "@images/mail.svg" %} klinika@weilovna.cz
+        </a>
+      </div>
+    </div>
+    <div class="headerMob-info">
+      <button class="header__opener js-header__opener" type="button">
+        {% include "@images/menu.svg" %}
+        <span>menu</span>
+      </button>
+      <div class="header-info__phone header-info__item">
+        <a href="tel:+420724277230">
+          {% include "@images/phone.svg" %} +420 724 277 230</a
+        >
+        <p>
+          Po - Pá: 8 - 12, 15 - 18 <br />
+          So: 9 - 11
+        </p>
+      </div>
+      <div class="headerMob-info__box">
+        <a href="#" class="headerMob-info__box-user">
+          <img src="images/ico/ava-mob.svg" alt="ava" loading="lazy" />
+        </a>
+        <a href="#" class="headerMob-info__box-basket">
+          <img src="images/ico/bag-mob.svg" alt="ava" loading="lazy" />
+          <span>0</span>
+        </a>
+      </div>
+    </div>
+    <div class="header-search d-xl-flex d-none">
+      <a href="#" target="_blank" class="header-search__ban">
+        <img
+          src="images/content/search-ban.png"
+          loading="lazy"
+          alt="specific"
+        />
+      </a>
+      <a
+        href="#"
+        data-bs-toggle="modal"
+        data-bs-target="#modalLogin"
+        class="btn loginBtn"
+      >
+        Přihlásit se
+      </a>
+
+      <h1 class="header-search__title">VŠE, CO HLEDÁTE PRO SVÉHO MAZLÍČKA</h1>
+      <form class="header-search__form">
+        <input type="text" />
+        <button>{% include "@images/search.svg" %}</button>
+      </form>
+    </div>
+    <div class="header-board">
+      <div class="header-slider">
+        <a href="#" class="header-slider__item" target="_blank">
+          <img src="images/content/header-slider-test.jpeg" alt="slider-img" />
+        </a>
+        <a href="#" class="header-slider__item" target="_blank">
+          <img src="images/content/header-slider-test.jpeg" alt="slider-img" />
+        </a>
+        <a href="#" class="header-slider__item" target="_blank">
+          <img src="images/content/header-slider-test.jpeg" alt="slider-img" />
+        </a>
+        <a href="#" class="header-slider__item" target="_blank">
+          <img src="images/content/header-slider-test.jpeg" alt="slider-img" />
+        </a>
+      </div>
+      <div class="header-board__account">
+        {% include "@components/basket/basket.twig" %}
+
+        <div class="account">
+          <div class="account__avatar">
+            <img src="images/content/ava.png" alt="ava" />
+          </div>
+          <div class="dropdown account__dropdown">
+            <button
+              class="account__btn"
+              type="button"
+              id="accountReg"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Můj účet {% include "@images/dropdown.svg" %}
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="accountReg">
+              <li>
+                <a href="#" class="dropdown-item"> Odhlásit se </a>
+              </li>
+              <li>
+                <a href="#" class="dropdown-item"> Můj profil </a>
+              </li>
+              <li>
+                <a href="#" class="dropdown-item"> Objednavky </a>
+              </li>
+              <li>
+                <a href="#" class="dropdown-item"> Oblíbené zboží </a>
+              </li>
+              <li>
+                <a href="#" class="dropdown-item"> Znovu objednat </a>
+              </li>
+              <li>
+                <a href="#" class="dropdown-item"> Reklamační řád </a>
+              </li>
+            </ul>
+          </div>
+          <div class="account__favorite d-block">
+            {% include "@images/favorite.svg" %}
+            <span class="favorite-count">5</span>
+          </div>
+          <a href="" class="account__btn flex-column g-4"
+            >Znovu objednat
+            <span>{% include "@images/circle.svg" %}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="main__wrapper">
+  {% include "@components/navigation/navigation.twig" %}
+  <div class="container">
+    <div class="main__row">
+      {% include "@components/aside/asideBans.twig" %}
+      <div class="main__content">
+        {% include "@components/product-section/product-section.twig" %}
+      </div>
+    </div>
+    <div class="product-section__file">
+      <object
+        data="https://helpdesk.cymedica.cz/KatalogProduktu/uploads/leaflets/C01706/2189.pdf"
+        type="application/pdf"
+        style="width: 100%"
+        height="700px"
+      >
+        <iframe
+          src="https://helpdesk.cymedica.cz/KatalogProduktu/uploads/leaflets/C01706/2189.pdf"
+          style="width: 100%"
+          height="700px"
+        >
+          <a
+            href="https://helpdesk.cymedica.cz/KatalogProduktu/uploads/leaflets/C01706/2189.pdf"
+            ><i class="fa fa-file-pdf"></i>St&#xE1;hnout PDF let&#xE1;k</a
+          >
+        </iframe>
+      </object>
+    </div>
+  </div>
+</div>
+{% include "@components/modal/modalLogin.twig" %} {% endblock %}

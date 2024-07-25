@@ -1,5 +1,5 @@
-{% extends "@components/base/base.twig" %} {% set title = "06.0_favorites" %} {%
-block main %}
+{% extends "@components/base/base.twig" %} {% set title =
+"13.0_shopping-cart-empty" %} {% block main %}
 <header class="header">
   <div class="header__promotion">
     <div class="container">
@@ -63,7 +63,7 @@ block main %}
         </a>
       </div>
     </div>
-    <div class="header-search">
+    <div class="header-search d-xl-flex d-none">
       <a href="#" target="_blank" class="header-search__ban">
         <img
           src="images/content/search-ban.png"
@@ -203,15 +203,8 @@ block main %}
   </div>
 </header>
 
-<div class="main__wrapper">
-  {% include "@components/navigation/navigation.twig" %}
-  <div class="container">
-    <div class="main__row">
-      {% include "@components/aside/asideBans.twig" %}
-      <div class="main__content">
-        {% include "@components/popularProducts/popularProducts.twig" %}
-      </div>
-    </div>
-  </div>
-</div>
+<main class="main" aria-label="Hlavní obsah">
+  {% include "@components/navigation/navigation.twig" %} {% include
+  "@components/shoppingMenu/shoppingMenu.twig" %}
+</main>
 {% include "@components/modal/modalLogin.twig" %} {% endblock %}

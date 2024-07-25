@@ -146,7 +146,6 @@ $(document).ready(function () {
     },
   });
 
-  // Обработка переключения показа/скрытия пароля
   $(".toggle-password").click(function () {
     var input = $(this).siblings($(this).attr("toggle"));
     if (input.attr("type") === "password") {
@@ -167,4 +166,10 @@ $(document).ready(function () {
       }, this);
     });
   }
+});
+$(document).ready(function () {
+  $("#shoppingInfoTextarea").on("input", function () {
+    this.style.height = "auto";
+    this.style.height = this.scrollHeight + "px";
+  });
 });

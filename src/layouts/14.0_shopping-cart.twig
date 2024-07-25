@@ -1,5 +1,5 @@
-{% extends "@components/base/base.twig" %} {% set title =
-"14.0_shopping-cart" %} {% block main %}
+{% extends "@components/base/base.twig" %} {% set title = "14.0_shopping-cart"
+%} {% block main %}
 <header class="header">
   <div class="header__promotion">
     <div class="container">
@@ -59,7 +59,7 @@
         </a>
         <a href="#" class="headerMob-info__box-basket">
           <img src="images/ico/bag-mob.svg" alt="ava" loading="lazy" />
-          <span>0</span>
+          <span>2</span>
         </a>
       </div>
     </div>
@@ -152,7 +152,12 @@
         </div>
       </div>
       <div class="header-board__account">
-        {% include "@components/basket/basket.twig" %}
+        <a href="#" class="basket">
+          <div class="basket__item">
+            {% include "@images/basket.svg" %}
+            <div class="basket__item-count">1</div>
+          </div>
+        </a>
 
         <div class="account">
           <div class="account__avatar">
@@ -205,6 +210,7 @@
 
 <main class="main" aria-label="Hlavní obsah">
   {% include "@components/navigation/navigation.twig" %} {% include
-  "@components/shoppingMenu/shoppingMenu.twig" %}
+  "@components/shoppingMenu/shoppingMenu.twig" %} {% include
+  "@components/shoppingCart/shoppingCart.twig" %}
 </main>
 {% include "@components/modal/modalLogin.twig" %} {% endblock %}

@@ -1,5 +1,5 @@
-{% extends "@components/base/base.twig" %} {% set title =
-"17.0_shopping-cart-2" %} {% block main %}
+{% extends "@components/base/base.twig" %} {% set title = "17.0_shopping-cart-2"
+%} {% block main %}
 <header class="header">
   <div class="header__promotion">
     <div class="container">
@@ -59,7 +59,7 @@
         </a>
         <a href="#" class="headerMob-info__box-basket">
           <img src="images/ico/bag-mob.svg" alt="ava" loading="lazy" />
-          <span>0</span>
+          <span>2</span>
         </a>
       </div>
     </div>
@@ -152,7 +152,12 @@
         </div>
       </div>
       <div class="header-board__account">
-        {% include "@components/basket/basket.twig" %}
+        <a href="#" class="basket">
+          <div class="basket__item">
+            {% include "@images/basket.svg" %}
+            <div class="basket__item-count">1</div>
+          </div>
+        </a>
 
         <div class="account">
           <div class="account__avatar">
@@ -206,5 +211,14 @@
 <main class="main" aria-label="Hlavní obsah">
   {% include "@components/navigation/navigation.twig" %} {% include
   "@components/shoppingMenu/shoppingMenu.twig" %}
+
+  <div class="shoppingCart__login">
+    Máte již u nás účet?
+    <a href="https://mizza-cz.github.io/weilovna/build/02.0_registration.html"
+      ><strong>Příhlášení</strong></a
+    >
+  </div>
+
+  {% include "@components/shoppingCart/shoppingCart.twig" %}
 </main>
 {% include "@components/modal/modalLogin.twig" %} {% endblock %}

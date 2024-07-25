@@ -1,0 +1,224 @@
+<section class="shoppingCart">
+  <div class="container">
+    <form action="">
+      <div class="cart">
+        <table>
+          <thead>
+            <tr>
+              <th>Produkt</th>
+              <th>Jedn. cena bez DPH</th>
+              <th>Množství</th>
+              <th>Sazba DPH</th>
+              <th>Jedn. cena s DPH</th>
+              <th>Cena celkem s DPH</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="cart-product">
+                  <div class="cart-product__img">
+                    <img
+                      src="images/content/product.png"
+                      alt="product"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="cart-product__name">
+                    <span class="fw-bold d-block"> SPECIFIC CPD-M </span>
+                    Puppy Medium Breed, 4 kg
+                  </div>
+                </div>
+              </td>
+              <td>590,61</td>
+              <td>
+                <div class="productForm__input">
+                  <div class="counter__btn" data-direction="minus" disabled>
+                    <img src="images/ico/minus.svg" alt="delete" />
+                  </div>
+                  <input
+                    disabled
+                    class="counter__value"
+                    type="text"
+                    value="1"
+                  />
+                  <div class="counter__btn" data-direction="plus">
+                    <img src="images/ico/add.svg" alt="add" />
+                  </div>
+                </div>
+              </td>
+              <td>12%</td>
+              <td>679,21 Kč</td>
+              <td>679,21 Kč</td>
+              <td>
+                <a class="cart-product__delete" href="#">
+                  {% include "@images/delete.svg" %}
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="cart-product">
+                  <div class="cart-product__img">
+                    <img
+                      src="images/content/product-2.png"
+                      alt="product"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="cart-product__name">
+                    <span class="fw-bold d-block"> SPECIFIC FT-H </span>
+
+                    Healthy Treats, pamlsky 300g
+                  </div>
+                </div>
+              </td>
+              <td>590,61</td>
+              <td>
+                <div class="productForm__input">
+                  <div class="counter__btn" data-direction="minus" disabled>
+                    <img src="images/ico/minus.svg" alt="delete" />
+                  </div>
+                  <input
+                    disabled
+                    class="counter__value"
+                    type="text"
+                    value="1"
+                  />
+                  <div class="counter__btn" data-direction="plus">
+                    <img src="images/ico/add.svg" alt="add" />
+                  </div>
+                </div>
+              </td>
+              <td>12%</td>
+              <td>679,21 Kč</td>
+              <td>679,21 Kč</td>
+              <td>
+                <a class="cart-product__delete" href="#">
+                  {% include "@images/delete.svg" %}
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="cartsMobile">
+        <div class="cartMobile">
+          <div class="cartMobile-product">
+            <div class="cartMobile-product__img">
+              <img
+                src="images/content/product.png"
+                alt="product"
+                loading="lazy"
+              />
+            </div>
+            <div class="cartMobile-product__name">
+              <span class="fw-bold d-block"> SPECIFIC CPD-M </span>
+              Puppy Medium Breed, 4 kg
+            </div>
+          </div>
+          <div class="productForm__input">
+            <div class="counter__btn" data-direction="minus" disabled>
+              <img src="images/ico/delete.svg" alt="delete" />
+            </div>
+            <input disabled class="counter__value" type="text" value="1" />
+            <div class="counter__btn" data-direction="plus">
+              <img src="images/ico/add.svg" alt="add" />
+            </div>
+          </div>
+          <ul class="cartMobile__info">
+            <li>
+              <span> Jedn. cena bez DPH </span>
+              590,61 Kč
+            </li>
+            <li>
+              <span>Sazba DPH</span>
+              12%
+            </li>
+            <li>
+              <span>Jedn. cena s DPH</span>
+              679,21 Kč
+            </li>
+            <li><span>Cena celkem s DPH</span> 679,21 Kč</li>
+          </ul>
+        </div>
+        <div class="cartMobile">
+          <div class="cartMobile-product">
+            <div class="cartMobile-product__img">
+              <img
+                src="images/content/product-2.png"
+                alt="product"
+                loading="lazy"
+              />
+            </div>
+            <div class="cartMobile-product__name">
+              <span class="fw-bold d-block"> SPECIFIC CPD-M </span>
+              Puppy Medium Breed, 4 kg
+            </div>
+          </div>
+          <div class="productForm__input">
+            <div class="counter__btn" data-direction="minus" disabled>
+              <img src="images/ico/delete.svg" alt="delete" />
+            </div>
+            <input disabled class="counter__value" type="text" value="1" />
+            <div class="counter__btn" data-direction="plus">
+              <img src="images/ico/add.svg" alt="add" />
+            </div>
+          </div>
+          <ul class="cartMobile__info">
+            <li>
+              <span> Jedn. cena bez DPH </span>
+              590,61 Kč
+            </li>
+            <li>
+              <span>Sazba DPH</span>
+              12%
+            </li>
+            <li>
+              <span>Jedn. cena s DPH</span>
+              679,21 Kč
+            </li>
+            <li><span>Cena celkem s DPH</span> 679,21 Kč</li>
+          </ul>
+        </div>
+      </div>
+      <div class="shoppingCart__discount">
+        <div class="form__box">
+          <input
+            name="code"
+            id="code"
+            type="text"
+            placeholder="Uplatnit slevový kód"
+          />
+        </div>
+        <button class="btn">Přídat</button>
+      </div>
+      <div class="orderResult">
+        <table>
+          <tr>
+            <td><strong> Mezisoučet bez DPH </strong></td>
+            <td>672,43</td>
+          </tr>
+          <tr>
+            <td><strong>DPH (15,00%)</strong></td>
+            <td>88,59 Kč</td>
+          </tr>
+
+          <tr>
+            <td><strong>Cena celkem s DPH</strong></td>
+            <td><strong>574,00 Kč</strong></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="shoppingInfo__bottom">
+        <a href="#" class="link">
+          {% include "@images/chevron-left.svg" %} Zpět k nákupu
+        </a>
+        <button class="btn">Potvrdit objednávku</button>
+      </div>
+    </form>
+  </div>
+</section>

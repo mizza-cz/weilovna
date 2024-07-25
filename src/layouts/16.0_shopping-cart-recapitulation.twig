@@ -152,7 +152,12 @@
         </div>
       </div>
       <div class="header-board__account">
-        {% include "@components/basket/basket.twig" %}
+        <a href="#" class="basket">
+          <div class="basket__item">
+            {% include "@images/basket.svg" %}
+            <div class="basket__item-count">1</div>
+          </div>
+        </a>
 
         <div class="account">
           <div class="account__avatar">

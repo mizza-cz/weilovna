@@ -132,6 +132,7 @@
   input[type="radio"] {
     width: 20px;
     height: 20px;
+    min-width: 20px;
     aspect-ratio: 1;
     border: calc(1em / 8) solid #020024;
     padding: calc(1em / 8);

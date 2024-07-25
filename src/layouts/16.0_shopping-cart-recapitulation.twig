@@ -1,5 +1,5 @@
 {% extends "@components/base/base.twig" %} {% set title =
-"15.0_shopping-cart-sent" %} {% block main %}
+"13.0_shopping-cart-empty" %} {% block main %}
 <header class="header">
   <div class="header__promotion">
     <div class="container">
@@ -204,16 +204,23 @@
 </header>
 
 <main class="main" aria-label="Hlavní obsah">
-  {% include "@components/navigation/navigation.twig" %} {% include
-  "@components/shoppingMenu/shoppingMenu.twig" %}
+  {% include "@components/navigation/navigation.twig" %}
 
-  <section class="shoppingCart__message">
-    <div class="container">
-      <div class="shoppingCart__message-inner">
-        <h1 class="title">Váš nákupní košík je prázdný</h1>
-        <a href="#" class="btn w-content mw-auto">Zpět do obchodu</a>
-      </div>
-    </div>
-  </section>
+  <ul class="shoppingMenu">
+    <li class="shoppingMenu__item">
+      <span>1</span>
+      Košík
+    </li>
+    <li class="shoppingMenu__item">
+      <span>2</span>
+      Doprava a platba
+    </li>
+    <li class="shoppingMenu__item active">
+      <span>3</span>
+      Rekapitulace
+    </li>
+  </ul>
+  {% include "@components/shoppingRecapitulation/shoppingRecapitulation.twig" %}
+  
 </main>
 {% include "@components/modal/modalLogin.twig" %} {% endblock %}

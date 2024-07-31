@@ -54,6 +54,21 @@
       margin-top: 16px;
     }
   }
+  .form-check {
+    margin-top: 0;
+  }
+  textarea {
+    min-height: 128px;
+  }
+  .company-fields {
+    margin-bottom: 40px;
+  }
+  .companyAddress-fields {
+    margin-bottom: 80px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 40px;
+    }
+  }
 }
 
 .shoppingInfo__board {

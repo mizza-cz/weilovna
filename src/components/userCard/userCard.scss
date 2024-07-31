@@ -21,8 +21,8 @@
         flex-direction: column;
         gap: 0;
       }
-      @include media-breakpoint-down(md) {
-        padding-right: 0;
+      @include media-breakpoint-down(sm) {
+        padding-right: 90px;
       }
     }
   }
@@ -170,9 +170,7 @@
   &__menu {
     padding-top: 100px;
     min-width: 16rem;
-    @include media-breakpoint-down(md) {
-      display: none;
-    }
+
     &-discount {
       position: absolute;
       top: 0;
@@ -183,6 +181,9 @@
       text-align: center;
       color: var(--pink);
       max-width: 144px;
+      @include media-breakpoint-down(sm) {
+        right: 16px;
+      }
       img {
         margin-bottom: 4px;
       }
@@ -197,6 +198,9 @@
     border-left: 1px solid var(--light-gray);
     padding-top: 16px;
     padding-bottom: 16px;
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
     li + li {
       padding-top: 16px;
       margin-top: 16px;
